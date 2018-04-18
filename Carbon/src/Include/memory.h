@@ -26,27 +26,32 @@
 #define PAGE_IS_NOT_WRITE 0x0
 #define PAGE_IS_NOT_4K 0x80
 #define PAGE_IS_NOT_GLOBAL 0x0
-typedef struct __bitmap__ {
-	uint32_t address;
-	uint32_t size;
+typedef struct __bitmap__
+{
+    uint32_t address;
+    uint32_t size;
 } BitMap;
-typedef struct __descriptor_manager__ {
-	Descriptor *desc;
-	int count;
+typedef struct __descriptor_manager__
+{
+    Descriptor *desc;
+    int count;
 } DescriptorManager;
-typedef struct __gdt__ {
-	Descriptor desc[GDT_COUNT];
+typedef struct __gdt__
+{
+    Descriptor desc[GDT_COUNT];
 } GDT;
-typedef struct __memory_pool__ {
-	BitMap bitmap;
-	uint32_t memorybeginaddress;
-	uint32_t type;
+typedef struct __memory_pool__
+{
+    BitMap bitmap;
+    uint32_t memorybeginaddress;
+    uint32_t type;
 } MemoryPool;
-typedef struct __page_manager__ {
-	MemoryPool physicalmemorypool;
-	uint32_t pbladdress;
-	char bitmap[128];
-	BitMap pblbitmap;
+typedef struct __page_manager__
+{
+    MemoryPool physicalmemorypool;
+    uint32_t pbladdress;
+    char bitmap[128];
+    BitMap pblbitmap;
 } PageManager;
 extern PageManager pg;
 void CreatBitmap(BitMap *bit, uint32_t mapaddress, uint32_t size);
