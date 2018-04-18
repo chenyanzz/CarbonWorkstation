@@ -21,11 +21,11 @@ uint32_t CreatPageManager(PageManager * p, uint32_t physicalmemorysize, uint32_t
     SetMemoryPool(ptr, address_begin, computepage(membitmapzise), 1);
     va_list args;
     va_start(args, kernelendaddress);
-    uint32_t tmp_begin, *tmp_end;
-    for (tmp_begin = (uint32_t *)args,va_arg(args, uint32_t),tmp_end = (uint32_t *)args; *tmp_end != 0; va_arg(args, uint32_t), tmp_begin = (uint32_t *)args, va_arg(args, uint32_t), tmp_end = (uint32_t *)args)
+    uint32_t *tmp_begin, *tmp_end;
+    for (tmp_begin = (uint32_t*)args,va_arg(args, uint32_t),tmp_end =(uint32_t*)args; *tmp_end != 0; va_arg(args, uint32_t),tmp_begin = (uint32_t*)args,va_arg(args, uint32_t),tmp_end =(uint32_t*)args)
     {
         uint32_t tmp;
-        for (tmp = tmp_begin & 0xFFFFF000; tmp <= *tmp_end; tmp = tmp + 0x1000)
+        for (tmp = (*tmp_begin) & 0xFFFFF000; tmp <=*tmp_end; tmp = tmp + 0x1000)
         {
             SetMemoryPoolOne(ptr, tmp, 1);
         }
@@ -42,10 +42,10 @@ uint32_t CreatPageManager(PageManager * p, uint32_t physicalmemorysize, uint32_t
     p->pblbitmap.address = (uint32_t)(&(p->bitmap));
     p->pblbitmap.size = 1024;
     va_start(args, kernelendaddress);
-    for (tmp_begin = (uint32_t *)args, va_arg(args, uint32_t), tmp_end = (uint32_t *)args; *tmp_end != 0; va_arg(args, uint32_t), tmp_begin = (uint32_t *)args, va_arg(args, uint32_t), tmp_end = (uint32_t *)args)
+    for (tmp_begin = (uint32_t*)args,va_arg(args, uint32_t),tmp_end =(uint32_t*)args; *tmp_end != 0; va_arg(args, uint32_t),tmp_begin = (uint32_t*)args,va_arg(args, uint32_t),tmp_end =(uint32_t*)args)
     {
         uint32_t tmp;
-        for (tmp = tmp_begin & 0xFFFFF000; tmp <= *tmp_end; tmp = tmp + 0x1000)
+        for (tmp = (*tmp_begin) & 0xFFFFF000; tmp <=*tmp_end; tmp = tmp + 0x1000)
         {
             SetPage(p, tmp, tmp);
         }

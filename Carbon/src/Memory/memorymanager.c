@@ -5,6 +5,93 @@ MemoryPool virtualmemorypool = { 0 };
 PageManager pg = { 0 };
 uint32_t physicalmemoryaddress = 0;
 uint32_t virtualmemoryaddress = 0;
+void ShowUseMemory( MemoryPool *pool)
+{
+    printk("\tUseing memory:\n");
+    uint32_t size = pool->bitmap.size;
+    uint32_t begin_address,end_address;
+    uint32_t x,y;
+    int i;
+    uint8_t value;
+    for(i=0; i<size;)
+    {
+        value = QueryBitmap(&pool->bitmap,i);
+        while(value == 0)
+        {
+            i++;
+            if(i>=size)
+            {
+                return;
+            }
+            value = QueryBitmap(&pool->bitmap,i);
+        }
+        x=i;
+        begin_address = (uint32_t)pool->memorybeginaddress + i * 4 * 1024 ;
+        while(value ==1)
+        {
+            i++;
+            if(i>=size)
+            {
+                break;
+            }
+            value = QueryBitmap(&pool->bitmap,i);
+        }
+        i--;
+        y=i;
+        end_address =(uint32_t)pool->memorybeginaddress + i * 4 * 1024  + 0xFFF;
+        printk("\t%d-%d:\t%dK-%dK   0x%08X-0x%08X \n",x,y,x*4,y*4,begin_address,end_address);
+        i++;
+        i++;
+    }
+}
+void ShowUnuseMemory( MemoryPool *pool)
+{
+    printk("\tno use memory:\n");
+    uint32_t size = pool->bitmap.size;
+    uint32_t begin_address,end_address;
+    uint32_t x,y;
+    int i;
+    uint8_t value;
+    for(i=0; i<size;)
+    {
+        value = QueryBitmap(&pool->bitmap,i);
+        while(value == 1)
+        {
+            i++;
+            if(i>=size)
+            {
+                return;
+            }
+            value = QueryBitmap(&pool->bitmap,i);
+        }
+        x=i;
+        begin_address = (uint32_t)pool->memorybeginaddress + i * 4 * 1024 ;
+        while(value ==0)
+        {
+            i++;
+            if(i>=size)
+            {
+                break;
+            }
+            value = QueryBitmap(&pool->bitmap,i);
+        }
+        i--;
+        y=i;
+        end_address =(uint32_t)pool->memorybeginaddress + i * 4 * 1024  + 0xFFF;
+        printk("\t%d-%d:\t%dK-%dK   0x%08X-0x%08X \n",x,y,x*4,y*4,begin_address,end_address);
+        i++;
+    }
+}
+void ShowMemoryPoolMessage( MemoryPool *pool)
+{
+    printk("MapAddress:0x%08X-MapSize:0x%08X\nBeginAddress:0x%08X-MemorySize:0x%08X\n",
+           pool->bitmap.address,
+           pool->bitmap.size,
+           pool->memorybeginaddress,
+           pool->bitmap.size * 4096);
+    ShowUnuseMemory(pool);
+    ShowUseMemory(pool);
+}
 int get_memory_size()
 {
     return (int)(global_multiboot_ptr->mem_upper * 1024);
@@ -14,8 +101,8 @@ void init_memory_manager(int physicalmemorysize, uint32_t kernelstart, uint32_t 
     init_gdt((uint32_t)&gdt_table);
     uint32_t tmp = CreatPageManager(&pg, physicalmemorysize, kernelstart, kernelend, 0, 0xFFFFF, 0, 0);
     CreatMemoryPool(&virtualmemorypool, tmp, 0, 1024 * 1024, VIRTUALMEMORY);
-    SetMemoryPool(&virtualmemorypool, kernelstart, computepage(tmp - kernelstart), 1);
     SetMemoryPool(&virtualmemorypool, 0, computepage(0x100000), 1);
+    SetMemoryPool(&virtualmemorypool, kernelstart, computepage(tmp - kernelstart), 1);
     SetMemoryPool(&virtualmemorypool, tmp, computepage(1024 * 1024 / 8), 1);
     SetMemoryPool(&pg.physicalmemorypool, tmp, computepage(1024 * 1024 / 8), 1);
     uint32_t tmpaddress;
