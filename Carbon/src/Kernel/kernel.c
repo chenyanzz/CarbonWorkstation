@@ -30,17 +30,10 @@ void kernel_main() {
 	printk("Try to init memory manager\n");
 	init_memory_manager(memory_size,(uint32_t)kernel_start,(uint32_t)kernel_end);
 	printk("Init memory manager successful!\n");
-
 	char *b = "test memory !";
     char * a = malloc_page(1);
     printk("%X",a);
     strcpy(a,b);
     printk("\n\n%s\n\n",a);
     free_page(a,1);
-
-
-
-	// print_cur_status();
-	// uint32_t eflags = get_eflags();
-	// printk("Eflags: 0x%X", eflags);
 }
