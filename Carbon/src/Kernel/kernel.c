@@ -30,10 +30,17 @@ void kernel_main() {
 	printk("Try to init memory manager\n");
 	init_memory_manager(memory_size,(uint32_t)kernel_start,(uint32_t)kernel_end);
 	printk("Init memory manager successful!\n");
-	char *b = "test memory !";
-    char * a = malloc_page(1);
-    printk("%X",a);
-    strcpy(a,b);
-    printk("\n\n%s\n\n",a);
-    free_page(a,1);
+	printk("Try to malloc a page\n");
+	char *b = "Test memory !";
+	char * a = malloc_page(1);
+	printk("Page address: %X\n",a);
+	strcpy(a,b);
+	printk("\n%s\n",a);
+	printk("\nTry to free a page\n");
+	free_page(a,1);
+	printk("Malloc and free page successful\n");
+	printk("Try to enable interrupt\n");
+	init_idt();
+	asm volatile ("sti");
+	printk("Enable interrupt successful\n");
 }
