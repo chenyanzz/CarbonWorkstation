@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Carbon" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Carbon" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Carbon" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="src/Assert/assert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Bootloader/boot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/CarbonRuntime/asm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/CarbonRuntime/stdelf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/CarbonRuntime/stdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/CarbonRuntime/string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Include/asm.h" />
+		<Unit filename="src/Include/assert.h" />
+		<Unit filename="src/Include/boot.h" />
+		<Unit filename="src/Include/descriptor.h" />
+		<Unit filename="src/Include/gate.h" />
+		<Unit filename="src/Include/intel8259a.h" />
+		<Unit filename="src/Include/interrupt.h" />
+		<Unit filename="src/Include/memory.h" />
+		<Unit filename="src/Include/stdarg.h" />
+		<Unit filename="src/Include/stddef.h" />
+		<Unit filename="src/Include/stdelf.h" />
+		<Unit filename="src/Include/stdio.h" />
+		<Unit filename="src/Include/string.h" />
+		<Unit filename="src/Include/tss.h" />
+		<Unit filename="src/Interrupt/intel8259a.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Interrupt/interrupt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Interrupt/interruptmanager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Kernel/kernel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Makefile" />
+		<Unit filename="src/Memory/bitmap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Memory/descriptormanager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Memory/memorymanager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Memory/memorypool.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Memory/page.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Memory/pagemanager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Script/link.ld" />
+		<Unit filename="src/Tool/bochsrc-gdb.txt" />
+		<Unit filename="src/Tool/bochsrc.bxrc" />
+		<Unit filename="src/Tool/bochsrc.txt" />
+		<Unit filename="src/Tool/gdbinit" />
+		<Unit filename="src/grub.img" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="Carbon/Carbon.cbp" />
+		<Project filename="CarbonCC/CarbonCC.cbp" />
+		<Project filename="CarbonLang/CarbonLang.cbp" />
+		<Project filename="CarbonVM/CarbonVM.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
