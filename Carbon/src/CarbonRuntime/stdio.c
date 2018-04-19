@@ -105,7 +105,7 @@ static int vsprintf(char *buff, const char *format, va_list args) {
 		field_width = -1;
 		if (is_digit(*format)) { field_width = skip_atoi(&format); }
 		else if (*format == '*') {
-			field_width = va_arg(args, int);
+			field_width = va_args(args, int);
 			if (field_width < 0) {
 				field_width = -field_width;
 				flags |= LEFT;
@@ -115,7 +115,7 @@ static int vsprintf(char *buff, const char *format, va_list args) {
 		if (*format == '.') {
 			++format;
 			if (is_digit(*format)) { precision = skip_atoi(&format); }
-			else if (*format == '*') { precision = va_arg(args, int); }
+			else if (*format == '*') { precision = va_args(args, int); }
 			if (precision < 0) { precision = 0; }
 		}
 		if (*format == 'h' || *format == 'l' || *format == 'L') { ++format; }
@@ -124,11 +124,11 @@ static int vsprintf(char *buff, const char *format, va_list args) {
 			if (!(flags & LEFT)) {
 				while (--field_width > 0) { *str++ = ' '; }
 			}
-			*str++ = (unsigned char)va_arg(args, int);
+			*str++ = (unsigned char)va_args(args, int);
 			while (--field_width > 0) { *str++ = ' '; }
 			break;
 		case 's':
-			s = va_arg(args, char *);
+			s = va_args(args, char *);
 			len = strlen(s);
 			if (precision < 0) { precision = len; }
 			else if (len > precision) { len = precision; }
@@ -137,30 +137,30 @@ static int vsprintf(char *buff, const char *format, va_list args) {
 			while (len < field_width--) { *str++ = ' '; }
 			break;
 		case 'o':
-			str = number(str, va_arg(args, unsigned long), 8, field_width, precision, flags);
+			str = number(str, va_args(args, unsigned long), 8, field_width, precision, flags);
 			break;
 		case 'p':
 			if (field_width == -1) {
 				field_width = 8;
 				flags |= ZEROPAD;
 			}
-			str = number(str, (unsigned long)va_arg(args, void *), 16, field_width, precision, flags);
+			str = number(str, (unsigned long)va_args(args, void *), 16, field_width, precision, flags);
 			break;
 		case 'x':
 			flags |= SMALL;
 		case 'X':
-			str = number(str, va_arg(args, unsigned long), 16, field_width, precision, flags);
+			str = number(str, va_args(args, unsigned long), 16, field_width, precision, flags);
 			break;
 		case 'd': case 'i':
 			flags |= SIGN;
 		case 'u':
-			str = number(str, va_arg(args, unsigned long), 10, field_width, precision, flags);
+			str = number(str, va_args(args, unsigned long), 10, field_width, precision, flags);
 			break;
 		case 'b':
-			str = number(str, va_arg(args, unsigned long), 2, field_width, precision, flags);
+			str = number(str, va_args(args, unsigned long), 2, field_width, precision, flags);
 			break;
 		case 'n':
-			ip = va_arg(args, int *);
+			ip = va_args(args, int *);
 			*ip = (str - buff);
 			break;
 		default:
