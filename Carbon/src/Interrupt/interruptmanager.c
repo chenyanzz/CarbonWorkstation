@@ -69,6 +69,7 @@ void init_idt() {
 	set_idt(46, hwint14, 0x0008, 0, IDT_DESC_ATTR_DPL0);
 	set_idt(47, hwint15, 0x0008, 0, IDT_DESC_ATTR_DPL0);
 	init_pic();
-	uint64_t idt_operand = ((uint64_t)&idt << 16) | ((sizeof(IDT) - 1));
+	uint32_t tmpidtaddress = (uint32_t)(&idt);
+	uint64_t idt_operand = ((uint64_t)tmpidtaddress << 16) | ((sizeof(IDT) - 1));
 	asm("lidt %0"::"m"(idt_operand));
 }
