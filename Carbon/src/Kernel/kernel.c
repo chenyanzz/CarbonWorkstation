@@ -39,8 +39,11 @@ void kernel_main() {
 	printk("\nTry to free a page\n");
 	free_page(a,1);
 	printk("Malloc and free page successful\n");
+	printk("Sizeof uint64_t: %d\n",sizeof(uint64_t));
+/*
 	printk("Try to enable interrupt\n");
 	init_idt();
 	asm volatile ("sti");
 	printk("Enable interrupt successful\n");
+*/
 }
