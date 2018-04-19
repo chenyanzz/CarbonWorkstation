@@ -11,6 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="81fe101a-beb1-4323-9344-6db76740c3f8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/Carbon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Bootloader/boot.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Bootloader/boot.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/stddef.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/stddef.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,6 +73,11 @@
               <item name="CarbonWorkstation" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarbonWorkstation" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CarbonWorkstation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarbonWorkstation" type="462c0819:PsiDirectoryNode" />
+              <item name="Carbon" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -80,7 +87,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CarbonCC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Carbon" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
@@ -130,7 +137,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524138018279</updated>
       <workItem from="1524138037043" duration="2960000" />
-      <workItem from="1524141098342" duration="535000" />
+      <workItem from="1524141098342" duration="755000" />
     </task>
     <task id="LOCAL-00001" summary="Update config">
       <created>1524141548709</created>
@@ -139,14 +146,22 @@
       <option name="project" value="LOCAL" />
       <updated>1524141548709</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update config">
+      <created>1524141692172</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524141692172</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3495000" />
+    <option name="totallyTimeSpent" value="3715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -194,6 +209,9 @@
           <caret lean-forward="true" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
