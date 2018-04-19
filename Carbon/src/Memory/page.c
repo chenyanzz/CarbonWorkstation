@@ -1,6 +1,6 @@
 ﻿#include "stddef.h"
 #include "memory.h"
-void  allotpagetable(const unsigned int  page_dir_base, int index, unsigned int page_tpl_base, int attr) {
+void allotpagetable(const unsigned int page_dir_base, int index, unsigned int page_tpl_base, int attr) {
 	unsigned int *p = (unsigned int *)(page_dir_base & 0xFFFFF000);
 	p[index] = (unsigned int)((page_tpl_base & 0xFFFFF000) + attr);
 }

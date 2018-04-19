@@ -3,9 +3,7 @@
 #include "boot.h"
 #include "stdio.h"
 static elf_t kernel_elf;
-void init_debug() {
-	kernel_elf = elf_from_multiboot(global_multiboot_ptr);
-}
+void init_debug() { kernel_elf = elf_from_multiboot(global_multiboot_ptr); }
 void print_cur_status() {
 	static int round = 0;
 	uint16_t reg1, reg2, reg3, reg4;

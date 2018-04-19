@@ -10,9 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81fe101a-beb1-4323-9344-6db76740c3f8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Carbon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carbon/src/Bootloader/boot.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Bootloader/boot.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/stddef.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/stddef.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Assert/assert.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Assert/assert.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/descriptor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/descriptor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/gate.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/gate.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/interrupt.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/interrupt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/memory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/stdelf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/stdelf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Interrupt/interrupt.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Interrupt/interrupt.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Memory/memorymanager.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Memory/memorymanager.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Memory/memorypool.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Memory/memorypool.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Memory/page.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Memory/page.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Memory/pagemanager.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Memory/pagemanager.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +33,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="stdarg.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdarg.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="stddef.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stddef.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="stdelf.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdelf.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,6 +70,18 @@
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Carbon/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Carbon/src/Memory/memorymanager.c" />
+        <option value="$PROJECT_DIR$/Carbon/src/Memory/memorypool.c" />
+        <option value="$PROJECT_DIR$/Carbon/src/Memory/page.c" />
+        <option value="$PROJECT_DIR$/Carbon/src/Memory/pagemanager.c" />
+        <option value="$PROJECT_DIR$/Carbon/src/Interrupt/interrupt.c" />
+        <option value="$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c" />
+        <option value="$PROJECT_DIR$/Carbon/src/Assert/assert.c" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/descriptor.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/gate.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/interrupt.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/memory.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/stdelf.h" />
       </list>
     </option>
   </component>
@@ -78,6 +120,19 @@
               <item name="CarbonWorkstation" type="462c0819:PsiDirectoryNode" />
               <item name="Carbon" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CarbonWorkstation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarbonWorkstation" type="462c0819:PsiDirectoryNode" />
+              <item name="Carbon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarbonWorkstation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarbonWorkstation" type="462c0819:PsiDirectoryNode" />
+              <item name="Carbon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Include" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -87,7 +142,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Carbon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
@@ -138,6 +193,7 @@
       <updated>1524138018279</updated>
       <workItem from="1524138037043" duration="2960000" />
       <workItem from="1524141098342" duration="755000" />
+      <workItem from="1524144612473" duration="1401000" />
     </task>
     <task id="LOCAL-00001" summary="Update config">
       <created>1524141548709</created>
@@ -157,7 +213,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3715000" />
+    <option name="totallyTimeSpent" value="5116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -165,7 +221,7 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.3290938" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.3280255" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32961783" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -177,9 +233,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,13 +252,7 @@
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/Carbon/Makefile" />
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt" />
-    <entry file="file://$PROJECT_DIR$/Carbon/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/Carbon/src/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -210,8 +260,161 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Memory/bitmap.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Memory/memorymanager.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="203" column="35" selection-start-line="203" selection-start-column="35" selection-end-line="203" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Memory/memorypool.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="77" column="46" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Memory/page.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Memory/pagemanager.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Kernel/kernel.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Interrupt/intel8259a.c">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Interrupt/interrupt.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="97" column="38" lean-forward="true" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Assert/assert.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Bootloader/boot.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/CarbonRuntime/asm.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/CarbonRuntime/stdelf.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/CarbonRuntime/stdio.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="231" lean-forward="true" selection-start-line="231" selection-end-line="231" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/CarbonRuntime/string.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/boot.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/assert.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/gate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/descriptor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/intel8259a.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/interrupt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/memory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdarg.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stddef.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdio.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/string.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/tss.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdelf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

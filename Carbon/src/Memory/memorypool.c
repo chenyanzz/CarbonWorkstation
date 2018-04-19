@@ -3,7 +3,7 @@
 #include "memory.h"
 #include "stdio.h"
 #include "stdarg.h"
-void CreatMemoryPool(MemoryPool *pool, uint32_t  bitmapaddress, uint32_t  beginaddress, uint32_t size, uint32_t type) {
+void CreatMemoryPool(MemoryPool *pool, uint32_t bitmapaddress, uint32_t  beginaddress, uint32_t size, uint32_t type) {
 	CreatBitmap(&(pool->bitmap), bitmapaddress, size);
 	pool->memorybeginaddress = beginaddress;
 	pool->type = type;
@@ -75,7 +75,7 @@ void SetMemoryPoolOne(MemoryPool *pool, uint32_t index, uint8_t value) {
 		while (1) {}
 	}
 }
-void SetMemoryPool(MemoryPool *pool, uint32_t  index, uint32_t count, uint8_t value) {
+void SetMemoryPool(MemoryPool *pool, uint32_t index, uint32_t count, uint8_t value) {
 	int i;
 	for (i = 0; i < count; i++) { SetMemoryPoolOne(pool, (uint32_t)((int)index + i * 4 * 1024), value); }
 }

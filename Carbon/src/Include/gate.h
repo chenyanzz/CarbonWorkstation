@@ -2,7 +2,7 @@
 #define GATE_H
 #include "stddef.h"
 #include "descriptor.h"
-typedef struct Gate {
+typedef struct __gate__ {
 	uint16_t offset1;
 	uint16_t selector;
 	uint16_t attr;

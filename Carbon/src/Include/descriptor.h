@@ -29,7 +29,7 @@
 #define SA_RPL3	3
 #define SA_TIG 0
 #define SA_TIL 4
-typedef struct Descriptor {
+typedef struct __descriptor__ {
 	uint16_t limit1;
 	uint16_t base1;
 	uint8_t base2;

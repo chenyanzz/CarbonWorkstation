@@ -53,7 +53,7 @@ void exception_handler(int vec_no, int err_code, int eip, int cs, int eflags);
 void spurious_irq(int irq);
 void keyboard_handler(int irq);
 void interrupt_handler();
-void modify_gate(Gate * g, uint32_t offset, uint16_t selector, uint8_t dcount, uint8_t attr);
+void modify_gate(Gate *g, uint32_t offset, uint16_t selector, uint8_t dcount, uint8_t attr);
 void set_idt(int index, intr_hander function, uint16_t selector, uint8_t dcount, uint8_t attr);
 void init_idt();
 void show_idt_table(int begin, int end);

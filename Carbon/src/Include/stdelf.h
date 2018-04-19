@@ -3,7 +3,7 @@
 #include "boot.h"
 #include "stddef.h"
 #define ELF32_ST_TYPE(i) ((i) & 0xf)
-typedef	struct __elf_section_header__ {
+typedef struct __elf_section_header__ {
 	uint32_t name;
 	uint32_t type;
 	uint32_t flags;

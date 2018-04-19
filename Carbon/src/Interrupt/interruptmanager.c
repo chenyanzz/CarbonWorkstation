@@ -8,7 +8,7 @@ void show_idt_table(int begin, int end) {
 	printk("\nIDT_address:0x%08X  IDT_size:0x%08X\n", (uint32_t)(idt_operand >> 16), (uint32_t)(idt_operand & 0xFFFF));
 	printk("index\t address selector-offset\t P DPL S TYPE param\n");
 	uint32_t tmppp = (uint32_t)(idt_operand >> 16);
-	Gate * tmp = (Gate *)tmppp;
+	Gate *tmp = (Gate *)tmppp;
 	uint16_t len = (uint16_t)(((idt_operand + 1) & 0xFFFF) / 8);
 	uint32_t endtmp, begintmp;
 	endtmp = end;
@@ -17,21 +17,21 @@ void show_idt_table(int begin, int end) {
 	if (end > len) { endtmp = len; }
 	int i;
 	for (i = begintmp; i <= endtmp; i++) {
-		Gate * index = tmp;
+		Gate *index = tmp;
 		index = index + i;
 		uint16_t tmpattr = index->attr & 0xFFFF;
 		printk("%d.\t0x%08X  0x%04X-0x%08X\t %01X  %01X  %01X   %01X   %d\n", i, (uint32_t)index, index->selector, ((uint32_t)(index->offset2) << 16) | index->offset1, (tmpattr >> 15) & 0x1, (tmpattr >> 13) & 0x3, (tmpattr >> 12) & 0x1, (tmpattr >> 8) & 0xF, (tmpattr) & 0b00011111);
 	}
 }
-void modify_gate(Gate * g, uint32_t offset, uint16_t selector, uint8_t dcount, uint8_t attr) {
+void modify_gate(Gate *g, uint32_t offset, uint16_t selector, uint8_t dcount, uint8_t attr) {
 	g->offset1 = offset & 0xFFFF;
 	g->selector = selector;
 	g->attr = (dcount & 0x1F) | ((attr << 8) & 0XFF00);
 	g->offset2 = (offset >> 16) & 0xFFFF;
 }
 void set_idt(int index, intr_hander function, uint16_t selector, uint8_t dcount, uint8_t attr) {
-	Gate * tmp;
-	tmp = (Gate*)&idt;
+	Gate *tmp;
+	tmp = (Gate *)&idt;
 	tmp = tmp + index;
 	modify_gate(tmp, (uint32_t)function, selector, dcount, attr);
 }

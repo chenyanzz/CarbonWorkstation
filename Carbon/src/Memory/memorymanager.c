@@ -5,105 +5,68 @@ MemoryPool virtualmemorypool = { 0 };
 PageManager pg = { 0 };
 uint32_t physicalmemoryaddress = 0;
 uint32_t virtualmemoryaddress = 0;
-
-void ShowUseMemory( MemoryPool *pool)
-{
-	
+void ShowUseMemory(MemoryPool *pool) {
 	printk("\tUseing memory:\n");
-
 	uint32_t size = pool->bitmap.size;	
-	uint32_t begin_address,end_address;
-	uint32_t x,y;
+	uint32_t begin_address, end_address;
+	uint32_t x, y;
 	int i;
 	uint8_t value;
-	for(i=0;i<size;)
-	{
- 		value = QueryBitmap(&pool->bitmap,i);
-		while(value == 0)
-		{
+	for (i = 0; i < size; ) {
+ 		value = QueryBitmap(&pool->bitmap, i);
+		while (value == 0) {
 			i++;
-			if(i>=size)
-			{
-				return;
-			}
-			value = QueryBitmap(&pool->bitmap,i);
+			if(i >= size) { return; }
+			value = QueryBitmap(&pool->bitmap, i);
 		}
-		x=i;
+		x = i;
 		begin_address = (uint32_t)pool->memorybeginaddress + i * 4 * 1024 ;
-		while(value ==1)
-		{
+		while (value == 1) {
 			i++;
-			if(i>=size)
-			{
-				break;
-			}
-			value = QueryBitmap(&pool->bitmap,i);
+			if (i >= size) { break; }
+			value = QueryBitmap(&pool->bitmap, i);
 		}
 		i--;
-		y=i;
-		end_address =(uint32_t)pool->memorybeginaddress + i * 4 * 1024  + 0xFFF;
-		printk("\t%d-%d:\t%dK-%dK   0x%08X-0x%08X \n",x,y,x*4,y*4,begin_address,end_address);
+		y = i;
+		end_address = (uint32_t)pool->memorybeginaddress + i * 4 * 1024 + 0xFFF;
+		printk("\t%d-%d:\t%dK-%dK   0x%08X-0x%08X \n", x, y, x * 4, y * 4, begin_address, end_address);
 		i++;
 		i++;
 	}
-
-
 }
-
-
-void ShowUnuseMemory( MemoryPool *pool)
-{
+void ShowUnuseMemory(MemoryPool *pool) {
 	printk("\tno use memory:\n");
 	uint32_t size = pool->bitmap.size;	
-	uint32_t begin_address,end_address;
-	uint32_t x,y;
+	uint32_t begin_address, end_address;
+	uint32_t x, y;
 	int i;
 	uint8_t value;
-	for(i=0;i<size;)
-	{
- 		value = QueryBitmap(&pool->bitmap,i);
-		while(value == 1)
-		{
+	for (i = 0; i < size; ) {
+ 		value = QueryBitmap(&pool->bitmap, i);
+		while (value == 1) {
 			i++;
-			if(i>=size)
-			{
-				return;
-			}
-			value = QueryBitmap(&pool->bitmap,i);
+			if (i >= size) { return; }
+			value = QueryBitmap(&pool->bitmap, i);
 		}
-		x=i;
+		x = i;
 		begin_address = (uint32_t)pool->memorybeginaddress + i * 4 * 1024 ;
-		while(value ==0)
-		{
+		while (value == 0) {
 			i++;
-			if(i>=size)
-			{
-				break;
-			}
+			if (i >= size) { break; }
 			value = QueryBitmap(&pool->bitmap,i);
 		}
 		i--;
-		y=i;
+		y = i;
 		end_address =(uint32_t)pool->memorybeginaddress + i * 4 * 1024  + 0xFFF;
-		printk("\t%d-%d:\t%dK-%dK   0x%08X-0x%08X \n",x,y,x*4,y*4,begin_address,end_address);
+		printk("\t%d-%d:\t%dK-%dK   0x%08X-0x%08X \n", x, y, x * 4, y * 4, begin_address, end_address);
 		i++;
 	}
 }
-
-void ShowMemoryPoolMessage( MemoryPool *pool)
-{
-	printk("MapAddress:0x%08X-MapSize:0x%08X\nBeginAddress:0x%08X-MemorySize:0x%08X\n",
-	pool->bitmap.address,
-	pool->bitmap.size,
-	pool->memorybeginaddress,
-	pool->bitmap.size * 4096);
+void ShowMemoryPoolMessage(MemoryPool *pool) {
+	printk("MapAddress:0x%08X-MapSize:0x%08X\nBeginAddress:0x%08X-MemorySize:0x%08X\n", pool->bitmap.address, pool->bitmap.size, pool->memorybeginaddress, pool->bitmap.size * 4096);
 	ShowUnuseMemory(pool);
 	ShowUseMemory(pool);
 }
-
-
-
-
 int get_memory_size() { return (int)(global_multiboot_ptr->mem_upper * 1024); }
 void init_memory_manager(int physicalmemorysize, uint32_t kernelstart, uint32_t kernelend) {
 	init_gdt((uint32_t)&gdt_table);
@@ -153,7 +116,7 @@ void SetPageOnPaging(uint32_t virturlpageaddress, uint32_t physicalpageaddress) 
 		SetMemoryPoolOne(&virtualmemorypool, virturlpageaddress, 1);
 	}
 	else {
-		uint32_t * tmppbladdress = (uint32_t*)pbl_address;
+		uint32_t * tmppbladdress = (uint32_t *)pbl_address;
 		uint32_t virtual_address = QueryVirturAddress(tmppbladdress[pblindex] & 0xFFFFF000);
 		allotpage(virtual_address, ptlindex, physicalpageaddress, PAGE_IN_MEM | PAGE_WRITE_READ);
 		SetMemoryPoolOne(ptr, physicalpageaddress, 1);
@@ -164,9 +127,9 @@ void ReleasePageOne(uint32_t virturlpageaddress) {
 	int pblindex, ptlindex;
 	pblindex = (virturlpageaddress & 0xFFFFF000) / (4 * 1024 * 1024);
 	ptlindex = (virturlpageaddress & 0x003FFFFF) / (4 * 1024);
-	uint32_t *address_pbl = (uint32_t*)pg.pbladdress;
+	uint32_t *address_pbl = (uint32_t *)pg.pbladdress;
 	uint32_t vitrual_address = QueryVirturAddress(address_pbl[pblindex] & 0xFFFFF000);
-	uint32_t tmpaddress = ((uint32_t*)vitrual_address)[ptlindex] & 0xFFFFF000;
+	uint32_t tmpaddress = ((uint32_t *)vitrual_address)[ptlindex] & 0xFFFFF000;
 	allotpage(vitrual_address, ptlindex, 0, 0);
 	MemoryPool * physicalpool = &(pg.physicalmemorypool);
 	SetMemoryPoolOne(physicalpool, tmpaddress, 0);
@@ -174,7 +137,7 @@ void ReleasePageOne(uint32_t virturlpageaddress) {
 	int i;
 	for (i = 0; i < 1024; i++) {
 		int test = 0;
-		uint32_t * ptl_address_tmp = (uint32_t*)(address_pbl[i] & 0xFFFFF000);
+		uint32_t *ptl_address_tmp = (uint32_t *)(address_pbl[i] & 0xFFFFF000);
 		int j;
 		for (j = 0; j < 1024; j++) {
 			if ((ptl_address_tmp[j] & 0xFFFFF000) != 0) {
@@ -183,7 +146,7 @@ void ReleasePageOne(uint32_t virturlpageaddress) {
 			}
 		}
 		if ((test == 0) && !QueryBitmap(&pg.pblbitmap, i)) {
-			uint32_t *tmp = (uint32_t*)(pg.pbladdress);
+			uint32_t *tmp = (uint32_t *)(pg.pbladdress);
 			if ((tmp[i] & 0xFFFFF000) != 0) {
 				ReleasePageOne(tmp[i] & 0xFFFFF000);
 				SetBitmap(&pg.pblbitmap, i, 0);
@@ -207,12 +170,12 @@ uint32_t QueryVirturAddress(uint32_t physicalpageaddress) {
 		uint32_t pbl_address, ptl_address;
 		BitMap *ptr = &(pg.pblbitmap);
 		pbl_address = pg.pbladdress;
-		uint32_t * tmppbl = (uint32_t*)(pbl_address & 0xFFFFF000);
+		uint32_t * tmppbl = (uint32_t *)(pbl_address & 0xFFFFF000);
 		int i, j;
 		for (i = 0; i < 1024; i++) {
 			if (QueryBitmap(ptr, i) == 0) { continue; }
 			ptl_address = tmppbl[i] & 0xFFFFF000;
-			uint32_t * tmpptl = (uint32_t*)ptl_address;
+			uint32_t * tmpptl = (uint32_t *)ptl_address;
 			for (j = 0; j < 1024; j++) {
 				if ((tmpptl[j] & 0xFFFFF000) == physicalpageaddress) {
 					pblindex = i;
@@ -237,7 +200,7 @@ uint32_t QueryPhysicalAddress(uint32_t virturlpageaddress) {
 		return 0;
 	}
 	else {
-		uint32_t * tmp = (uint32_t*)pbl_address;
+		uint32_t * tmp = (uint32_t *)pbl_address;
 		ptl_address = tmp[pblindex] & 0xFFFFF000;
 		printk("the pagetable address is: 0x%08X\n", ptl_address);
 		tmp = (uint32_t*)ptl_address;

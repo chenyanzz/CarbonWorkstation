@@ -2,7 +2,7 @@
 #include "stddef.h"
 #include "stdarg.h"
 #include "string.h"
-uint32_t CreatPageManager(PageManager * p, uint32_t physicalmemorysize, uint32_t kernelbeginaddress, uint32_t kernelendaddress, ...) {
+uint32_t CreatPageManager(PageManager *p, uint32_t physicalmemorysize, uint32_t kernelbeginaddress, uint32_t kernelendaddress, ...) {
 	uint32_t mempagecount = computepage(physicalmemorysize);
 	uint32_t membitmapzise = mempagecount / 8;
 	uint32_t address_begin;
@@ -16,9 +16,9 @@ uint32_t CreatPageManager(PageManager * p, uint32_t physicalmemorysize, uint32_t
 	va_list args;
 	va_start(args, kernelendaddress);
 	uint32_t *tmp_begin, *tmp_end;
-	for (tmp_begin = (uint32_t*)args,va_arg(args, uint32_t),tmp_end =(uint32_t*)args;*tmp_end != 0;va_arg(args, uint32_t),tmp_begin = (uint32_t*)args,va_arg(args, uint32_t),tmp_end =(uint32_t*)args) {
+	for (tmp_begin = (uint32_t *)args,va_arg(args, uint32_t),tmp_end =(uint32_t *)args;*tmp_end != 0;va_arg(args, uint32_t),tmp_begin = (uint32_t *)args,va_arg(args, uint32_t),tmp_end =(uint32_t *)args) {
         uint32_t tmp;
-        for (tmp = (*tmp_begin) & 0xFFFFF000; tmp <=*tmp_end; tmp = tmp + 0x1000) { SetMemoryPoolOne(ptr, tmp, 1);}
+        for (tmp = (*tmp_begin) & 0xFFFFF000; tmp <= *tmp_end; tmp = tmp + 0x1000) { SetMemoryPoolOne(ptr, tmp, 1);}
 	}
 	va_end(args);
 	uint32_t pbl = QueryUnuseMemoryOne(ptr, 0);
@@ -30,9 +30,9 @@ uint32_t CreatPageManager(PageManager * p, uint32_t physicalmemorysize, uint32_t
 	p->pblbitmap.address = (uint32_t)(&(p->bitmap));
 	p->pblbitmap.size = 1024;
 	va_start(args, kernelendaddress);
-	for (tmp_begin = (uint32_t*)args,va_arg(args, uint32_t),tmp_end =(uint32_t*)args;*tmp_end != 0;va_arg(args, uint32_t),tmp_begin = (uint32_t*)args,va_arg(args, uint32_t),tmp_end =(uint32_t*)args) {
+	for (tmp_begin = (uint32_t *)args,va_arg(args, uint32_t),tmp_end =(uint32_t *)args;*tmp_end != 0;va_arg(args, uint32_t),tmp_begin = (uint32_t *)args,va_arg(args, uint32_t),tmp_end =(uint32_t *)args) {
         uint32_t tmp;
-        for (tmp = (*tmp_begin) & 0xFFFFF000; tmp <=*tmp_end; tmp = tmp + 0x1000) { SetPage(p, tmp, tmp);}
+        for (tmp = (*tmp_begin) & 0xFFFFF000; tmp <= *tmp_end; tmp = tmp + 0x1000) { SetPage(p, tmp, tmp);}
 	}
 	va_end(args);
 	for (i = kernelbeginaddress; i <= kernelendaddress; i = i + 4096) { SetPage(p, i, i); }
@@ -40,7 +40,7 @@ uint32_t CreatPageManager(PageManager * p, uint32_t physicalmemorysize, uint32_t
 	SetPage(p, p->pbladdress, p->pbladdress);
 	return QueryUnuseMemoryOne(ptr, 0);
 }
-void SetPage(PageManager * p, uint32_t virturlpageaddress, uint32_t physicalpageaddress) {
+void SetPage(PageManager *p, uint32_t virturlpageaddress, uint32_t physicalpageaddress) {
 	int pblindex, ptlindex;
 	pblindex = (virturlpageaddress & 0xFFFFF000) / (4 * 1024 * 1024);
 	ptlindex = (virturlpageaddress & 0x003FFFFF) / (4 * 1024);
@@ -53,13 +53,13 @@ void SetPage(PageManager * p, uint32_t virturlpageaddress, uint32_t physicalpage
 		allotpagetable(p->pbladdress, pblindex, tmp, PAGE_IN_MEM | PAGE_WRITE_READ);
 		SetPage(p, tmp, tmp);
 	}
-	uint32_t * pbladdresstmp = (uint32_t*)(p->pbladdress);
+	uint32_t * pbladdresstmp = (uint32_t *)(p->pbladdress);
 	ptladdress = pbladdresstmp[pblindex];
 	allotpage(ptladdress, ptlindex, physicalpageaddress, PAGE_IN_MEM | PAGE_WRITE_READ);
 }
-void OpenPageMode(PageManager * p) { page_runing((uint32_t)p->pbladdress); }
+void OpenPageMode(PageManager *p) { page_runing((uint32_t)p->pbladdress); }
 void ClosePageMode() { page_end(); }
-void FlushTBL(PageManager * p) {
+void FlushTBL(PageManager *p) {
 	page_end();
 	page_runing((uint32_t)p->pbladdress);
 }
