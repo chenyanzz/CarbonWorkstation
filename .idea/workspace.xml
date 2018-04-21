@@ -10,9 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81fe101a-beb1-4323-9344-6db76740c3f8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Carbon/src/Include/superblock.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/stdarg.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/stdarg.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/stddef.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/stddef.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,12 +23,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="interruptmanager.c" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="memory.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Carbon/src/Include/memory.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="72" column="81" lean-forward="true" selection-start-line="72" selection-start-column="81" selection-end-line="72" selection-end-column="81" />
+            <state relative-caret-position="464">
+              <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -59,10 +59,15 @@
         <option value="$PROJECT_DIR$/Carbon/src/Include/descriptor.h" />
         <option value="$PROJECT_DIR$/Carbon/src/Include/gate.h" />
         <option value="$PROJECT_DIR$/Carbon/src/Include/interrupt.h" />
-        <option value="$PROJECT_DIR$/Carbon/src/Include/memory.h" />
         <option value="$PROJECT_DIR$/Carbon/src/Include/stdelf.h" />
         <option value="$PROJECT_DIR$/Carbon/src/Include/stdarg.h" />
         <option value="$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/task.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/stddef.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/superblock.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/list.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/CarbonRuntime/list.c" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/memory.h" />
       </list>
     </option>
   </component>
@@ -112,7 +117,14 @@
               <item name="CarbonWorkstation" type="462c0819:PsiDirectoryNode" />
               <item name="Carbon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Interrupt" type="462c0819:PsiDirectoryNode" />
+              <item name="CarbonRuntime" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarbonWorkstation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarbonWorkstation" type="462c0819:PsiDirectoryNode" />
+              <item name="Carbon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Include" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -174,7 +186,10 @@
       <updated>1524138018279</updated>
       <workItem from="1524138037043" duration="2960000" />
       <workItem from="1524141098342" duration="755000" />
-      <workItem from="1524144612473" duration="1798000" />
+      <workItem from="1524144612473" duration="2742000" />
+      <workItem from="1524198922545" duration="75000" />
+      <workItem from="1524216366670" duration="1574000" />
+      <workItem from="1524271143468" duration="3033000" />
     </task>
     <task id="LOCAL-00001" summary="Update config">
       <created>1524141548709</created>
@@ -197,11 +212,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524148205717</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update code,Test the modifition">
+      <created>1524150097048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524150097048</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5513000" />
+    <option name="totallyTimeSpent" value="11139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -209,10 +231,9 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32961783" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.3280255" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.32643312" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32961783" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961783" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -222,6 +243,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32961783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -236,9 +258,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update config" />
     <MESSAGE value="Update code,start clear compile warning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update code,start clear compile warning" />
+    <MESSAGE value="Update code,Test the modifition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update code,Test the modifition" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/superblock.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/Carbon/Makefile" />
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt" />
@@ -292,9 +322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Interrupt/intel8259a.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Carbon/src/Interrupt/interrupt.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -308,9 +335,6 @@
           <caret lean-forward="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Bootloader/boot.c">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Carbon/src/CarbonRuntime/asm.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -340,44 +364,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/boot.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/assert.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Carbon/src/Include/gate.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/intel8259a.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/interrupt.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/memory.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdio.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/string.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/tss.h">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdelf.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -393,20 +385,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stddef.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdarg.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="55" lean-forward="true" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="72" column="81" lean-forward="true" selection-start-line="72" selection-start-column="81" selection-end-line="72" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdarg.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/tss.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/task.h" />
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/interrupt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/superblock.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/list.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/CarbonRuntime/list.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stddef.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/memory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
         </state>
       </provider>
     </entry>
