@@ -10,9 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81fe101a-beb1-4323-9344-6db76740c3f8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Carbon/src/Include/superblock.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Carbon/src/Include/math.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carbon/src/Include/stddef.h" beforeDir="false" afterPath="$PROJECT_DIR$/Carbon/src/Include/stddef.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,17 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="memory.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Carbon/src/Include/memory.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -68,6 +57,9 @@
         <option value="$PROJECT_DIR$/Carbon/src/Include/list.h" />
         <option value="$PROJECT_DIR$/Carbon/src/CarbonRuntime/list.c" />
         <option value="$PROJECT_DIR$/Carbon/src/Include/memory.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/math.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/Include/stack.h" />
+        <option value="$PROJECT_DIR$/Carbon/src/CarbonRuntime/stack.c" />
       </list>
     </option>
   </component>
@@ -189,7 +181,8 @@
       <workItem from="1524144612473" duration="2742000" />
       <workItem from="1524198922545" duration="75000" />
       <workItem from="1524216366670" duration="1574000" />
-      <workItem from="1524271143468" duration="3033000" />
+      <workItem from="1524271143468" duration="3135000" />
+      <workItem from="1524310549719" duration="3626000" />
     </task>
     <task id="LOCAL-00001" summary="Update config">
       <created>1524141548709</created>
@@ -219,15 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524150097048</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add bool data type and superblock structure">
+      <created>1524275220772</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1524275220772</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11139000" />
+    <option name="totallyTimeSpent" value="14867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -259,7 +258,8 @@
     <MESSAGE value="Update config" />
     <MESSAGE value="Update code,start clear compile warning" />
     <MESSAGE value="Update code,Test the modifition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update code,Test the modifition" />
+    <MESSAGE value="Add bool data type and superblock structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add bool data type and superblock structure" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Carbon/src/Include/superblock.h">
@@ -421,20 +421,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/list.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/CarbonRuntime/list.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/list.h" />
+    <entry file="file://$PROJECT_DIR$/Carbon/src/CarbonRuntime/list.c" />
     <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stddef.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -442,10 +430,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/math.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Carbon/src/Include/memory.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdio.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/string.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/boot.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/CarbonRuntime/stack.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stack.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
