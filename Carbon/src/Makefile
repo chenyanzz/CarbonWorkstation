@@ -2,11 +2,16 @@ C_SOURCE=$(shell find . -name "*.c")
 C_OBJECT=$(patsubst %.c,%.o,$(C_SOURCE))
 S_SOURCE=$(shell find . -name "*.s")
 S_OBJECT=$(patsubst %.s,%.o,$(S_SOURCE))
+TEST_DIR="../test/"
+TEST_C_SOURCE=$(shell find $(TEST_DIR) -name "*.c")
+TEST_C_OBJECT=$(patsubst %.c,%.o,$(TEST_C_SOURCE))
 CC=gcc
 LD=ld
 CFLAGS=-c -Wall -m32 -ggdb -gstabs+ -std=gnu11 -nostdinc -fpack-struct -fno-builtin -fno-stack-protector -I Include
 LDFLAGS=-T Script/link.ld -m elf_i386 -nostdlib
 all: $(S_OBJECT) $(C_OBJECT) link update
+all_test: $(S_OBJECT) $(C_OBJECT) $(TEST_C_OBJECT) link_test update
+
 .c.o:
 	@echo "Compiling the source..."
 	$(CC) $(CFLAGS) $< -o $@
@@ -15,10 +20,15 @@ all: $(S_OBJECT) $(C_OBJECT) link update
 	$(ASM) $(ASMFLAGS) $<
 link:
 	@echo "Linking kernel..."
+	$(CC) $(CFLAGS) Kernel/testbridge.c -o Kernel/testbridge.o 
 	$(LD) $(LDFLAGS) $(S_OBJECT) $(C_OBJECT) -o kernel.elf
+link_test:
+	@echo "Linking test kernel..."
+	$(CC) $(CFLAGS) -DENABLE_TEST Kernel/testbridge.c -o Kernel/testbridge.o 
+	$(LD) $(LDFLAGS) $(S_OBJECT) $(C_OBJECT) $(TEST_C_OBJECT) -o kernel.elf
 .PHONY: clean
 clean:
-	$(RM) $(S_OBJECT) $(C_OBJECT) kernel.elf Carbon.img
+	$(RM) $(S_OBJECT) $(C_OBJECT) $(TEST_C_OBJECT) kernel.elf Carbon.img
 .PHONY: update
 update:
 	test -d /mnt/Carbon || sudo mkdir -p /mnt/Carbon

@@ -10,6 +10,7 @@
 #include "interrupt.h"
 int memory_size;
 void kernel_main();
+extern void bridge_test(void);
 extern Multiboot *multiboot_ptr;
 extern uint32_t kernel_start[];
 extern uint32_t kernel_end[];
@@ -29,5 +30,6 @@ void kernel_main() {
 	printk("Kernel in memory used: %d KB\n\n", (kernel_end - kernel_start) / 1024);
 	init_memory_manager(memory_size,(uint32_t)kernel_start,(uint32_t)kernel_end);
 	init_idt();
+	bridge_test();
 	asm volatile ("sti");
 }
