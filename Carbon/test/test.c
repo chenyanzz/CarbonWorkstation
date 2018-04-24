@@ -9,9 +9,9 @@ extern bool memory_page_alloc_test_all_wirteable(void);
 // add all test case here
 static TestCase mTestCases[] = 
 {
-	{"memory_page_alloc_test",	memory_page_alloc_test,	TEST_RESULT_NOT_EXECUTED},
-	{"memory_page_alloc_test_all_wirteable",	memory_page_alloc_test_all_wirteable,	TEST_RESULT_NOT_EXECUTED},
-	{"NULL",	NULL,	TEST_RESULT_NOT_EXECUTED},
+	TEST_CASE(memory_page_alloc_test),
+	TEST_CASE(memory_page_alloc_test_all_wirteable),
+	TEST_CASE(NULL),
 };
 // end of add all test case
 

@@ -12,6 +12,8 @@ do{														\
 
 #define TEST_ASSERT_FALSE(result,msg) TEST_ASSERT_TRUE(!(result),msg)
 
+#define TEST_CASE(testcase) {#testcase,testcase,TEST_RESULT_NOT_EXECUTED}
+
 #define ARY_LEN(ary) (sizeof(ary)/sizeof(ary[0]))
 
 
@@ -34,7 +36,6 @@ struct TestCase_st {
 	int testResult;
 };
 typedef struct TestCase_st TestCase;
-
 
 void start_all_test();
 void start_test_case(TestCase* testCase);
