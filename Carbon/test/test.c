@@ -4,6 +4,8 @@
 // extern all test case here
 extern bool memory_page_alloc_test(void);
 extern bool memory_page_alloc_test_all_wirteable(void);
+bool memory_heap_test(void);
+bool memory_heap_test_no_leak(void);
 // end of extern all test case
 
 // add all test case here
@@ -11,6 +13,8 @@ static TestCase mTestCases[] =
 {
 	TEST_CASE(memory_page_alloc_test),
 	TEST_CASE(memory_page_alloc_test_all_wirteable),
+	TEST_CASE(memory_heap_test),
+	TEST_CASE(memory_heap_test_no_leak),
 	TEST_CASE(NULL),
 };
 // end of add all test case
@@ -45,7 +49,7 @@ void start_test_case(TestCase* testCase)
 		// fail
 		testCase->testResult = TEST_RESULT_FAIL;
 	}
-	printk("Test:%s finished.\n",testCase->testName);
+	//printk("Test:%s finished.\n",testCase->testName);
 }
 
 const char* get_test_result_str(int result)

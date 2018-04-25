@@ -1,8 +1,9 @@
 #include "stdio.h"
 #include "test.h"
 #include "memory.h"
+#include "memory_heap.h"
 
-#define ALLOC_PAGE (10)
+#define ALLOC_PAGE (100)
 #define PAGE_SIZE (4*1024)
 
 bool memory_page_alloc_test(void)
@@ -29,3 +30,60 @@ bool memory_page_alloc_test_all_wirteable(void)
 	return TRUE;
 }
 
+bool memory_heap_test(void)
+{
+	const int HEAP_PAGE = 100;
+	uint8_t* page = malloc_page(HEAP_PAGE);
+	TEST_ASSERT_TRUE(page!=NULL,"malloc_page must return not null.");
+	MemoryHeap* heap = createMemoryHeap(page,HEAP_PAGE*PAGE_SIZE);
+	TEST_ASSERT_TRUE(heap!=NULL,"createMemoryHeap must return not null.");
+	
+	int* testPointer = MemoryHeap_malloc(heap,1024);
+	testPointer[0] = 100;
+	TEST_ASSERT_TRUE(testPointer[0] == 100,"MemoryHeap_malloc must return writeable memory.");
+	MemoryHeap_free(heap,testPointer);
+	
+	destoryMemoryHeap(heap);
+	free_page(page,HEAP_PAGE);
+	return TRUE;
+}
+
+bool memory_heap_test_no_leak(void)
+{
+	const int HEAP_PAGE = 100;
+	uint8_t* page = malloc_page(HEAP_PAGE);
+	TEST_ASSERT_TRUE(page!=NULL,"malloc_page must return not null.");
+	MemoryHeap* heap = createMemoryHeap(page,HEAP_PAGE*PAGE_SIZE);
+	TEST_ASSERT_TRUE(heap!=NULL,"createMemoryHeap must return not null.");
+	
+	size_t total = MemoryHeap_total(heap);
+	TEST_ASSERT_TRUE(total>0,"heap total must lage than 0.");
+	TEST_ASSERT_TRUE(total<HEAP_PAGE*PAGE_SIZE,"heap total must less than HEAP_PAGE*PAGE_SIZE.");
+	TEST_ASSERT_TRUE(MemoryHeap_used(heap)==0,"heap used must be zero.");
+	
+	for(int i=0;i<HEAP_PAGE;i++){
+		int* p = MemoryHeap_malloc(heap,PAGE_SIZE);
+		TEST_ASSERT_TRUE(p!=NULL,"MemoryHeap_malloc must return not null.");
+		TEST_ASSERT_TRUE(MemoryHeap_used(heap)>0,"heap used must lage than zero.");
+		TEST_ASSERT_TRUE(MemoryHeap_used(heap)==MemoryHeap_real_used(heap),"MemoryHeap_used must equal MemoryHeap_real_used.");
+		MemoryHeap_free(heap,p);
+		TEST_ASSERT_TRUE(MemoryHeap_used(heap)==0,"heap used must be zero.");
+		TEST_ASSERT_TRUE(MemoryHeap_used(heap)==MemoryHeap_real_used(heap),"MemoryHeap_used must equal MemoryHeap_real_used.");
+	}
+	
+	int* pointerArray[HEAP_PAGE];
+	for(int i=0;i<HEAP_PAGE;i++){
+		pointerArray[i] = MemoryHeap_malloc(heap,PAGE_SIZE/2);
+		TEST_ASSERT_TRUE(pointerArray[i]!=NULL,"MemoryHeap_malloc must return not null.");
+		TEST_ASSERT_TRUE(MemoryHeap_used(heap)==MemoryHeap_real_used(heap),"MemoryHeap_used must equal MemoryHeap_real_used.");
+	}
+	for(int i=0;i<HEAP_PAGE;i++){
+		MemoryHeap_free(heap,pointerArray[i]);
+		TEST_ASSERT_TRUE(MemoryHeap_used(heap)==MemoryHeap_real_used(heap),"MemoryHeap_used must equal MemoryHeap_real_used.");
+	}
+	TEST_ASSERT_TRUE(MemoryHeap_used(heap)==0,"heap used must be zero.");
+	
+	destoryMemoryHeap(heap);
+	free_page(page,HEAP_PAGE);
+	return TRUE;
+}
