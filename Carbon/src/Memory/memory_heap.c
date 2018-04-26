@@ -52,7 +52,7 @@ void* MemoryHeap_malloc(MemoryHeap* heap,size_t size)
 		MemoryHeapNode* next = pro->nextNode;
 		
 		node = createMemoryHeapNode(
-				((uint8_t*)pro)+sizeof(MemoryHeapNode),
+				((uint8_t*)pro) + pro->realSize,
 				realSize,
 				pro,
 				next
@@ -77,10 +77,14 @@ void MemoryHeap_free(MemoryHeap* heap,void* addr)
 	MemoryHeapNode* next = node->nextNode;
 	
 	if(node == heap->curNode){
-		heap->curNode = NULL;
+		heap->curNode = pro;
 	}
 	if(node == heap->headNode){
+		assert((pro==NULL));
 		heap->headNode = next;
+		if(next!=NULL){
+			next->proNode = pro;
+		}
 	}else{
 		assert((pro!=NULL));
 		pro->nextNode = next;
