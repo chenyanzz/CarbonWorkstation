@@ -61,6 +61,7 @@ bool memory_heap_test_no_leak(void)
 	TEST_ASSERT_TRUE(total<HEAP_PAGE*PAGE_SIZE,"heap total must less than HEAP_PAGE*PAGE_SIZE.");
 	TEST_ASSERT_TRUE(MemoryHeap_used(heap)==0,"heap used must be zero.");
 	
+	printk("step1:Loop malloc and free.\n");
 	for(int i=0;i<HEAP_PAGE;i++){
 		int* p = MemoryHeap_malloc(heap,PAGE_SIZE);
 		TEST_ASSERT_TRUE(p!=NULL,"MemoryHeap_malloc must return not null.");
@@ -72,6 +73,7 @@ bool memory_heap_test_no_leak(void)
 	}
 	
 	int* pointerArray[HEAP_PAGE];
+	printk("step2:Loop malloc,Then loop free.\n");
 	for(int i=0;i<HEAP_PAGE;i++){
 		pointerArray[i] = MemoryHeap_malloc(heap,PAGE_SIZE/2);
 		TEST_ASSERT_TRUE(pointerArray[i]!=NULL,"MemoryHeap_malloc must return not null.");
@@ -83,7 +85,28 @@ bool memory_heap_test_no_leak(void)
 	}
 	TEST_ASSERT_TRUE(MemoryHeap_used(heap)==0,"heap used must be zero.");
 	
+	printk("step3:Loop malloc with random free.Then loop free.\n");
+	for(int i=0;i<HEAP_PAGE;i++){
+		pointerArray[i] = MemoryHeap_malloc(heap,PAGE_SIZE);
+		TEST_ASSERT_TRUE(pointerArray[i]!=NULL,"MemoryHeap_malloc must return not null.");
+		TEST_ASSERT_TRUE(MemoryHeap_used(heap)==MemoryHeap_real_used(heap),"MemoryHeap_used must equal MemoryHeap_real_used.");
+		if(i%3==0){
+			MemoryHeap_free(heap,pointerArray[i]);
+			pointerArray[i] = NULL;
+		}
+	}
+	for(int i=0;i<HEAP_PAGE;i++){
+		if(pointerArray[i]!=NULL){
+			MemoryHeap_free(heap,pointerArray[i]);
+			TEST_ASSERT_TRUE(MemoryHeap_used(heap)==MemoryHeap_real_used(heap),"MemoryHeap_used must equal MemoryHeap_real_used.");
+		}
+	}
+	TEST_ASSERT_TRUE(MemoryHeap_used(heap)==0,"heap used must be zero.");
+	
+	
 	destoryMemoryHeap(heap);
 	free_page(page,HEAP_PAGE);
 	return TRUE;
 }
+
+
