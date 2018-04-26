@@ -29,7 +29,7 @@ void interrupt_handler() {
 }
 void keyboard_handler(int irq) {
 	uint8_t scan_code = inb(0x60);
-	printk("%c ", scan_code);
+	printk("0x%X ", scan_code);
 }
 void divide_error() { exception2("pushl $0xFFFFFFFF", "pushl $0"); }
 void single_step_exception() { exception2("pushl $0xFFFFFFFF", "pushl $1"); }

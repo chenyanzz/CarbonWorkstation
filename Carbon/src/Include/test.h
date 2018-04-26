@@ -36,7 +36,7 @@ struct TestCase_st {
 	int testResult;
 };
 typedef struct TestCase_st TestCase;
-
+void init_test();
 void start_all_test();
 void start_test_case(TestCase* testCase);
 void show_test_case(TestCase* testCase);

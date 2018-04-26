@@ -8,6 +8,7 @@
 #include "string.h"
 #include "memory.h"
 #include "interrupt.h"
+#include "test.h"
 int memory_size;
 void kernel_main();
 extern void bridge_test(void);
@@ -31,5 +32,6 @@ void kernel_main() {
 	init_memory_manager(memory_size,(uint32_t)kernel_start,(uint32_t)kernel_end);
 	init_idt();
 	bridge_test();
+	init_test();	
 	asm volatile ("sti");
 }
