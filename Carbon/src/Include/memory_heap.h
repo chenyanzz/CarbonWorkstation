@@ -4,8 +4,8 @@
 #include "stddef.h"
 #include "memory.h"
 typedef struct __memory_heap_node__ {
-	struct MemoryHeapNode_st* proNode;
-	struct MemoryHeapNode_st* nextNode;
+	struct __memory_heap_node__* proNode;
+	struct __memory_heap_node__* nextNode;
 	size_t realSize;
 	uint32_t checkSum;
 } MemoryHeapNode;
