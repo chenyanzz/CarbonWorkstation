@@ -1,12 +1,10 @@
 #include "kmemory.h"
-
 static MemoryHeap* mKernelMemoryHeap = NULL;
-
 void init_kmemory(void){
 	uint8_t* page = malloc_page(KERNEL_MEMORY_PAGE);
-	assert(page!=NULL);
-	mKernelMemoryHeap = createMemoryHeap(page,KERNEL_MEMORY_PAGE*PAGE_SIZE);
-	assert(mKernelMemoryHeap!=NULL);
+	assert(page != NULL);
+	mKernelMemoryHeap = createMemoryHeap(page,KERNEL_MEMORY_PAGE * PAGE_SIZE);
+	assert(mKernelMemoryHeap != NULL);
 }
 
 void destroy_kmemory(void){
@@ -16,11 +14,11 @@ void destroy_kmemory(void){
 }
 
 void* kmalloc(size_t size){
-	assert(mKernelMemoryHeap!=NULL);
+	assert(mKernelMemoryHeap != NULL);
 	return MemoryHeap_malloc(mKernelMemoryHeap,size);
 }
 
 void kfree(void* addr){
-	assert(mKernelMemoryHeap!=NULL);
+	assert(mKernelMemoryHeap != NULL);
 	MemoryHeap_free(mKernelMemoryHeap,addr);
 }
