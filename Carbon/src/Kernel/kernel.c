@@ -8,11 +8,9 @@
 #include "string.h"
 #include "memory.h"
 #include "interrupt.h"
-#include "test.h"
 #include "kmemory.h"
 int memory_size;
 void kernel_main();
-extern void init_test(void);
 extern Multiboot *multiboot_ptr;
 extern uint32_t kernel_start[];
 extern uint32_t kernel_end[];
@@ -32,7 +30,6 @@ void kernel_main() {
 	printk("Kernel in memory used: %d KB\n\n", (kernel_end - kernel_start) / 1024);
 	init_memory_manager(memory_size,(uint32_t)kernel_start,(uint32_t)kernel_end);
 	init_idt();
-	init_kmemory();
-	init_test();	
+	init_kmemory();	
 	asm volatile ("sti");
 }
