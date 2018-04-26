@@ -7,7 +7,6 @@ LD=ld
 CFLAGS=-c -Wall -m32 -ggdb -gstabs+ -std=gnu11 -nostdinc -fpack-struct -fno-builtin -fno-stack-protector -I Include
 LDFLAGS=-T Script/link.ld -m elf_i386 -nostdlib
 all: $(S_OBJECT) $(C_OBJECT) link update
-all_test: $(S_OBJECT) $(C_OBJECT) $(TEST_C_OBJECT) link_test update
 
 .c.o:
 	@echo "Compiling the source..."
@@ -18,12 +17,9 @@ all_test: $(S_OBJECT) $(C_OBJECT) $(TEST_C_OBJECT) link_test update
 link:
 	@echo "Linking kernel..." 
 	$(LD) $(LDFLAGS) $(S_OBJECT) $(C_OBJECT) -o kernel.elf
-link_test:
-	@echo "Linking test kernel..."
-	$(LD) $(LDFLAGS) $(S_OBJECT) $(C_OBJECT) $(TEST_C_OBJECT) -o kernel.elf
 .PHONY: clean
 clean:
-	$(RM) $(S_OBJECT) $(C_OBJECT) $(TEST_C_OBJECT) kernel.elf Carbon.img
+	$(RM) $(S_OBJECT) $(C_OBJECT) kernel.elf Carbon.img
 .PHONY: update
 update:
 	test -d /mnt/Carbon || sudo mkdir -p /mnt/Carbon
