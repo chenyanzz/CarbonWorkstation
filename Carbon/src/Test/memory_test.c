@@ -2,9 +2,9 @@
 #include "test.h"
 #include "memory.h"
 #include "memory_heap.h"
+#include "kmemory.h"
 
 #define ALLOC_PAGE (100)
-#define PAGE_SIZE (4*1024)
 
 bool memory_page_alloc_test(void)
 {
@@ -135,4 +135,13 @@ bool memory_heap_test_no_leak(void)
 	return TRUE;
 }
 
+bool kernel_memory_heap_test(void)
+{
+	int* pointer = kmalloc(1024);
+	TEST_ASSERT_TRUE(pointer!=NULL,"kmalloc must return not null.");
+	pointer[0] = 123456;
+	TEST_ASSERT_TRUE(pointer[0]==123456,"kmalloc must return writeable memory.");
+	kfree(pointer);
+	return TRUE;
+}
 

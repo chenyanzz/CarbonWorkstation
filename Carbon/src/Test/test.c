@@ -6,6 +6,7 @@ extern bool memory_page_alloc_test(void);
 extern bool memory_page_alloc_test_all_wirteable(void);
 bool memory_heap_test(void);
 bool memory_heap_test_no_leak(void);
+bool kernel_memory_heap_test(void);
 // end of extern all test case
 
 // add all test case here
@@ -15,6 +16,7 @@ static TestCase mTestCases[] =
 	TEST_CASE(memory_page_alloc_test_all_wirteable),
 	TEST_CASE(memory_heap_test),
 	TEST_CASE(memory_heap_test_no_leak),
+	TEST_CASE(kernel_memory_heap_test),
 	TEST_CASE(NULL),
 };
 // end of add all test case
