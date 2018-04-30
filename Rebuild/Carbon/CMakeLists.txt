@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.5)
 project(Carbon)
 set(LINKER_FLAGS -T ${PROJECT_SOURCE_DIR}/Script/link.ld -m elf_i386 -nostdlib ${PROJECT_SOURCE_DIR}/Build/*.o)
 include_directories(Include)
