@@ -36,5 +36,7 @@ void kernel_main() {
 	init_memory_manager(memory_size,(uint32_t)kernel_start,(uint32_t)kernel_end);
 	init_idt();
 	init_kmemory();	
+	init_process();
+	init_time();
 	asm volatile ("sti");
 }
