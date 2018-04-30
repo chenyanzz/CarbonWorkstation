@@ -7,7 +7,7 @@
 #include "types.h"
 
 struct time_t {
-    int ms;     ///<毫秒 @note byte会溢出
+    int ms;     ///<毫秒 @note uint8_t会溢出
     int second; ///<秒
     int minute; ///<分
     int hour;   ///<时

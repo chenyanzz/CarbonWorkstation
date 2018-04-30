@@ -30,9 +30,25 @@ add_executable(src
         Include/string.h
         Include/superblock.h
         Include/tss.h
+        Include/APIC_timer.h
+        Include/init.h
+        Include/irq.h
+        Include/key_map.h
+        Include/keyboard.h
+        Include/PIT_timer.h
+        Include/APIC_timer.h
+        Include/RTC.h
+        Include/RTC_timer.h
+        Include/stdlib.h
+        Include/time.h
+        Include/process.h
+        Include/deal_int.h
         Interrupt/intel8259a.c
         Interrupt/interrupt.c
         Interrupt/interruptmanager.c
+        Interrupt/irq.cpp
+        Interrupt/int_handler.cpp
+        Interrupt/keyboard.cpp
         Kernel/kernel.c
         Memory/bitmap.c
         Memory/descriptormanager.c

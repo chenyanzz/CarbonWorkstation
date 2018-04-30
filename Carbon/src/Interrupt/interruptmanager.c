@@ -4,6 +4,7 @@
 
 IDT idt = { 0 };
 
+
 void show_idt_table(int begin, int end) {
 	uint64_t idt_operand = (uint64_t)0;
 	asm("sidt %0":"=m"(idt_operand));

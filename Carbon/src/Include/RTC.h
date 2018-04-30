@@ -8,8 +8,8 @@
 #include "types.h"
 #include "time.h"
 
-extern const word P_RTC_REG;
-extern const word P_RTC_DATA;
+extern const uint16_t P_RTC_REG;
+extern const uint16_t P_RTC_DATA;
 
 
 ///RTC寄存器表
@@ -31,14 +31,14 @@ enum RTCReg {
  * @param reg 寄存器编号
  * @return 值
  */
-byte getRTCRegValue(RTCReg reg);
+uint8_t getRTCRegValue(RTCReg reg);
 
 /**
  * 写RTC寄存器
  * @param reg 寄存器编号
  * @param val 值
  */
-void setRTCRegValue(RTCReg reg, byte val);
+void setRTCRegValue(RTCReg reg, uint8_t val);
 
 /**
  * 获取RTC中的时间

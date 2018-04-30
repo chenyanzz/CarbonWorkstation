@@ -83,6 +83,6 @@ void checkTimeOverFlow(time_t &time) {
 }
 
 void printTime(time_t time) {
-    printf("%4d %2d.%2d %2d:%2d:%2d::%4d \n",
+    printk("%4d %2d.%2d %2d:%2d:%2d::%4d \n",
            time.year, time.month, time.day, time.hour, time.minute, time.second,time.ms);
 }

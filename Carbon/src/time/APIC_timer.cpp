@@ -1,8 +1,8 @@
 #include "APIC_timer.h"
 #include "stdio_color.h"
 #include "asm.h"
-#include "types.h"
-#include "kernel/interrupt/irq.h"
+#include "stddef.h"
+#include "irq.h"
 #include "time.h"
 
 bool init_APIC_timer()
@@ -24,7 +24,7 @@ void set_APIC_timer(int freq)
 	outb(0x40, divisor >> 8);
 }
 
-#include "process/process.h"
+#include "process.h"
 #include "time.h"
 
 extern "C"

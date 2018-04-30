@@ -7,38 +7,38 @@
 #include "stdio.h"
 #include "time.h"
 
-const word P_RTC_REG = 0x70;
-const word P_RTC_DATA = 0x71;
+const uint16_t P_RTC_REG = 0x70;
+const uint16_t P_RTC_DATA = 0x71;
 
 static bool isBCDMode;
 
-byte getRTCRegValue(RTCReg reg) {
+uint8_t getRTCRegValue(RTCReg reg) {
     /*
-     1.将寄存器的编号(byte)写入P_RTC_REG端口
-     2.从P_RTC_DATA端口读取数据(byte)
+     1.将寄存器的编号(uint8_t)写入P_RTC_REG端口
+     2.从P_RTC_DATA端口读取数据(uint8_t)
     */
     outb(P_RTC_REG, reg);
     return inb(P_RTC_DATA);
 }
 
-void setRTCRegValue(RTCReg reg, byte val) {
+void setRTCRegValue(RTCReg reg, uint8_t val) {
     /*
-     1.将寄存器的编号(byte)写入P_RTC_REG端口
-     2.从P_RTC_DATA端口读取数据(byte)
+     1.将寄存器的编号(uint8_t)写入P_RTC_REG端口
+     2.从P_RTC_DATA端口读取数据(uint8_t)
     */
     outb(P_RTC_REG, reg);
     outb(P_RTC_DATA, val);
 }
 
 bool get_update_in_progress_flag() {
-    byte stat = getRTCRegValue(StatusA);
+    uint8_t stat = getRTCRegValue(StatusA);
     return bit(stat, 7);
 }
 
 /// wait until the "Update in progress"(bit 7 of Status Register A) flag goes from "set" to "clear"
 /// 等待正在刷新标志（SR.A）变0
 void wait_RTC_update() {
-    byte stat;
+    uint8_t stat;
 
     //等待刷新标志位恢复0
     do {
@@ -46,14 +46,14 @@ void wait_RTC_update() {
     } while (bit(stat, 7) != 0);
 }
 
-static byte registerB;
+static uint8_t registerB;
 
 /**
  * 获取RTC里的数据，仅此而已
  * @param time时间结构体
  */
 void getTmpTime(time_t &time) {
-    byte registerB = getRTCRegValue(StatusB);
+    uint8_t registerB = getRTCRegValue(StatusB);
     time.second = getRTCRegValue(Second);
     time.minute = getRTCRegValue(Minute);
     time.hour = getRTCRegValue(Hour);

@@ -29,6 +29,6 @@ void setTerminalColor(TextColor tc, BgColor bc = defaultBgColor, bool blink = fa
 /**
  * 另一种方式，直接传入color字节
  */
-void setTerminalColorByte(uint8_t c);
+void setTerminalColoruint8_t(uint8_t c);
 
 #endif // STDIO_H

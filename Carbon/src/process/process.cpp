@@ -99,16 +99,16 @@ id_t create_process(PROCESS_MAIN_PROC proc, char *name, bool bWait)
 	strcpy(ptcb->name, name);
 
 	//切换到线程二的堆栈帧
-	asm("mov esp, %0" ::"g"(ptcb->esp));
+	asm("movl esp, %0" ::"g"(ptcb->esp));
 
 	//压入线程最后ret时的返回地址
-	asm("push %0" ::"g"((uint32_t)deleteCurrentProcess));
+	asm("pushl %0" ::"g"((uint32_t)deleteCurrentProcess));
 
 	//压入主函数首地址
-	asm("push %0" ::"g"(proc));
+	asm("pushl %0" ::"g"(proc));
 
 	//给切换时switch_to函数最后的leave指令压入esp
-	asm("push %0" ::"g"(ptcb->esp));
+	asm("pushl %0" ::"g"(ptcb->esp));
 
 	asm(
 		"pushad;"

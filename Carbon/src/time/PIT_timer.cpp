@@ -3,10 +3,9 @@
  */
 
 #include "PIT_timer.h"
-#include "stdio_color.h"
 #include "asm.h"
-#include "types.h"
-#include "kernel/interrupt/irq.h"
+#include "stddef.h"
+#include "irq.h"
 #include "time.h"
 
 
@@ -23,8 +22,8 @@ void set_PIT_timer() {
  每100次tick修正一次（ms++）
 */
     outb(P_PIT_COMMAND,0b00110110);//Channel 0, 2bytes data, mode 3, binary data
-    outb(P_PIT_DATA,(byte)3344);
-    outb(P_PIT_DATA,(byte)3344>>8);
+    outb(P_PIT_DATA,(uint8_t)3344);
+    outb(P_PIT_DATA,(uint8_t)3344>>8);
 }
 
 extern "C"
