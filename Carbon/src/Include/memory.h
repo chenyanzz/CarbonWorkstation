@@ -26,6 +26,9 @@
 #define PAGE_IS_NOT_WRITE 0x0
 #define PAGE_IS_NOT_4K 0x80
 #define PAGE_IS_NOT_GLOBAL 0x0
+
+#define SIZE_MEM_PAGE (4 * 1024)
+
 typedef struct __bitmap__ {
 	uint32_t address;
 	uint32_t size;
@@ -75,7 +78,7 @@ void ClosePageMode();
 void FlushTBL(PageManager *p);
 int get_memory_size();
 void init_memory_manager(int physicalmemorysize, uint32_t kernelstart, uint32_t kernelend);
-void *malloc_page(int size);
+void *malloc_page(int count);
 void free_page(void *ptr, int size);
 void SetPageOnPaging(uint32_t virturlpageaddress, uint32_t physicalpageaddress);
 void ReleasePageOne(uint32_t virturlpageaddress);

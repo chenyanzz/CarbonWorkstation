@@ -1,6 +1,7 @@
 #include "intel8259a.h"
 #include "stddef.h"
 #include "asm.h"
+
 void init_pic() {
 	outb(PIC_M_CTRL, 0x11);
 	outb(PIC_M_DATA, 0x20);

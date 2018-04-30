@@ -1,5 +1,6 @@
 #include "string.h"
 #include "assert.h"
+
 void *memcpy(void *dest, const void *src, size_t count) {
 	if (dest == NULL || src == NULL || count < 0)
 		return NULL;
@@ -9,6 +10,7 @@ void *memcpy(void *dest, const void *src, size_t count) {
 		*tempDest++ = *tempSrc++;
 	return dest;
 }
+
 void *memset(void *src, int chunk, size_t count) {
 	if (src == NULL || count < 0)
 		return NULL;
@@ -17,6 +19,7 @@ void *memset(void *src, int chunk, size_t count) {
 		*tempSrc++ = chunk;
 	return src;
 }
+
 void bzero(void *src, unsigned len) {
 	register char *tempSrc = (char *)src;
 	while (len != 0) {
@@ -24,6 +27,7 @@ void bzero(void *src, unsigned len) {
 		len--;
 	}
 }
+
 char *strcpy(char *dest, const char *src) {
 	char *addr = dest;
 	assert((dest != NULL) && (src != NULL));
@@ -32,6 +36,7 @@ char *strcpy(char *dest, const char *src) {
 	*dest = '\0';
 	return addr;
 }
+
 char *strcat(char *dest, const char *src) {
 	assert(dest != NULL && src != NULL);
 	char *ptr = dest;
@@ -40,6 +45,7 @@ char *strcat(char *dest, const char *src) {
 	while ((*ptr++ = *src++) != 0);
 	return dest;
 }
+
 int strcmp(const char *str1, const char *str2) {
 	assert((str1 != NULL) && (str2 != NULL));
 	while (*str1 && *str2 && (*str1 == *str2)) {
@@ -48,6 +54,7 @@ int strcmp(const char *str1, const char *str2) {
 	}
 	return *str1 - *str2;
 }
+
 int strlen(const char *src) {
 	if (src == NULL)
 		return NULL;

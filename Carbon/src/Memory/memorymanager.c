@@ -34,6 +34,7 @@ void ShowUseMemory(MemoryPool *pool) {
 		i++;
 	}
 }
+
 void ShowUnuseMemory(MemoryPool *pool) {
 	printk("\tno use memory:\n");
 	uint32_t size = pool->bitmap.size;	
@@ -62,12 +63,15 @@ void ShowUnuseMemory(MemoryPool *pool) {
 		i++;
 	}
 }
+
 void ShowMemoryPoolMessage(MemoryPool *pool) {
 	printk("MapAddress:0x%08X-MapSize:0x%08X\nBeginAddress:0x%08X-MemorySize:0x%08X\n", pool->bitmap.address, pool->bitmap.size, pool->memorybeginaddress, pool->bitmap.size * 4096);
 	ShowUnuseMemory(pool);
 	ShowUseMemory(pool);
 }
+
 int get_memory_size() { return (int)(global_multiboot_ptr->mem_upper * 1024); }
+
 void init_memory_manager(int physicalmemorysize, uint32_t kernelstart, uint32_t kernelend) {
 	init_gdt((uint32_t)&gdt_table);
 	uint32_t tmp = CreatPageManager(&pg, physicalmemorysize, kernelstart, kernelend, 0, 0xFFFFF, 0, 0);
@@ -80,15 +84,17 @@ void init_memory_manager(int physicalmemorysize, uint32_t kernelstart, uint32_t 
 	for (tmpaddress = tmp; tmpaddress < tmp + computepage(1024 * 1024 / 8) * 0x1000; tmpaddress = tmpaddress + 0x1000) { SetPage(&pg, tmpaddress, tmpaddress); }
 	OpenPageMode(&pg);
 }
-void *malloc_page(int size) {
-	uint32_t tmp = QueryUnuseMemory(&virtualmemorypool, 0, size);
+
+void *malloc_page(int count) {
+	uint32_t tmp = QueryUnuseMemory(&virtualmemorypool, 0, count);
 	int i;
-	for (i = 0; i < size; i++) {
+	for (i = 0; i < count; i++) {
 		uint32_t pytmp = QueryUnuseMemoryOne(&(pg.physicalmemorypool), 0);
 		SetPageOnPaging(tmp + i * 4 * 1024, pytmp);
 	}
 	return (void *)tmp;
 }
+
 void free_page(void *ptr, int size) {
 	if (((uint32_t)ptr & 0xFFFFF000) == 0) {}
 	else {
@@ -96,6 +102,7 @@ void free_page(void *ptr, int size) {
 		ReleasePage(address, size);
 	}
 }
+
 void SetPageOnPaging(uint32_t virturlpageaddress, uint32_t physicalpageaddress) {
 	int pblindex, ptlindex;
 	pblindex = (virturlpageaddress & 0xFFFFF000) / (4 * 1024 * 1024);

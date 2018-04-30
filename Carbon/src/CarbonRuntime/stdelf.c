@@ -2,6 +2,7 @@
 #include "boot.h"
 #include "stdelf.h"
 #include "string.h"
+
 elf_t elf_from_multiboot(Multiboot *mb) {
 	int i;
 	elf_t elf;
@@ -20,6 +21,7 @@ elf_t elf_from_multiboot(Multiboot *mb) {
 	}
 	return elf;
 }
+
 const char *elf_lookup_symbol(uint32_t addr, elf_t *elf) {
 	int i;
 	for (i = 0; i < (elf->symtabsz / sizeof(elf_symbol_t)); i++) {

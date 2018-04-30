@@ -3,6 +3,7 @@
 #include "stdarg.h"
 #include "string.h"
 #include "asm.h"
+
 #define is_digit(c) ((c) >= '0' && (c) <= '9')
 #define ZEROPAD	1
 #define SIGN 2
@@ -12,10 +13,14 @@
 #define SPECIAL 32 
 #define SMALL 64
 #define do_div(n,base) ({ int __res;asm("divl %4" : "=a" (n),"=d" (__res):"0"(n),"1"(0),"r"(base));__res; })
+
+
 static uint16_t *video_memory = (uint16_t *)(0xB8000);
 static uint8_t cursor_x = 0;
 static uint8_t cursor_y = 0;
 static int vsprintf(char *buff, const char *format, va_list args);
+
+
 void printk(const char *format, ...) {
 	static char buffer[1024];
 	va_list args;
@@ -25,11 +30,13 @@ void printk(const char *format, ...) {
 	buffer[i] = '\0';
 	write(buffer);
 }
+
 static int skip_atoi(const char **s) {
 	int i = 0;
 	while (is_digit(**s)) { i = i * 10 + *((*s)++) - '0'; }
 	return i;
 }
+
 static char *number(char *str, int num, int base, int size, int precision, int type) {
 	char c, sign, tmp[36];
 	const char *digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -68,6 +75,7 @@ static char *number(char *str, int num, int base, int size, int precision, int t
 	while (size-- > 0) { *str++ = ' '; }
 	return str;
 }
+
 static int vsprintf(char *buff, const char *format, va_list args) {
 	int len;
 	int i;
@@ -173,6 +181,7 @@ static int vsprintf(char *buff, const char *format, va_list args) {
 	*str = '\0';
 	return (str - buff);
 }
+
 static void move_cursor() {
 	uint16_t cursorLocation = cursor_y * 80 + cursor_x;
 	outb(0x3D4, 14);
@@ -180,6 +189,7 @@ static void move_cursor() {
 	outb(0x3D4, 15);
 	outb(0x3D5, cursorLocation);
 }
+
 static void scroll() {
 	uint8_t attribute_byte = (0 << 4) | (0x5 & 0x0F);
 	uint16_t blank = 0x20 | (attribute_byte << 8);
@@ -192,6 +202,7 @@ static void scroll() {
 		cursor_y = 24;
 	}
 }
+
 void clear() {
 	uint8_t attribute_byte = (0 << 4) | (0x5 & 0x0F);
 	uint16_t blank = 0x20 | (attribute_byte << 8);
@@ -202,6 +213,7 @@ void clear() {
 	cursor_y = 0;
 	move_cursor();
 }
+
 void putchar(char c) {
 	uint8_t back_color = (uint8_t)0;
 	uint8_t front_color = (uint8_t)15;
@@ -225,6 +237,7 @@ void putchar(char c) {
 	scroll();
 	move_cursor();
 }
+
 void write(char *str) {
 	while (*str)
 		putchar(*str++);

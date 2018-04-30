@@ -2,8 +2,11 @@
 #include "stdelf.h"
 #include "boot.h"
 #include "stdio.h"
+
 static elf_t kernel_elf;
+
 void init_debug() { kernel_elf = elf_from_multiboot(global_multiboot_ptr); }
+
 void print_cur_status() {
 	static int round = 0;
 	uint16_t reg1, reg2, reg3, reg4;
@@ -18,12 +21,14 @@ void print_cur_status() {
 	printk("%d:  ss = %x\n", round, reg4);
 	++round;
 }
+
 void panic(const char *msg) {
 	printk("*** System panic: %s\n", msg);
 	print_stack_trace();
 	printk("*** System panic end ***\n");
 	while (1);
 }
+
 void print_stack_trace() {
 	uint32_t *ebp, *eip;
 	asm volatile ("mov %%ebp, %0" : "=r" (ebp));
@@ -33,6 +38,7 @@ void print_stack_trace() {
 		ebp = (uint32_t*)*ebp;
 	}
 }
+
 void _assert(void *exp, void *file, uint32_t line) {
 	printk("Assertion failed: %s,File: %s,Line: %d", exp, file, line);
 	print_stack_trace();

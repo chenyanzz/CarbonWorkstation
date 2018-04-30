@@ -33,6 +33,7 @@ uint32_t QueryUnuseMemoryOne(MemoryPool *pool, uint32_t address) {
 	else { printk("Your Address is NOT in this pool,cheak code!"); }
 	return (uint32_t)addresstmp;
 }
+
 uint32_t QueryUnuseMemory(MemoryPool *pool, uint32_t address, uint32_t count) {
 	uint32_t addresstmp = 0;
 	uint32_t size = pool->bitmap.size;
@@ -60,6 +61,7 @@ uint32_t QueryUnuseMemory(MemoryPool *pool, uint32_t address, uint32_t count) {
 	}
 	return (uint32_t)addresstmp;
 }
+
 void SetMemoryPoolOne(MemoryPool *pool, uint32_t index, uint8_t value) {
 	uint32_t poolbeginaddress = (uint32_t)pool->memorybeginaddress;
 	uint32_t poolendaddress = (uint32_t)(((int)pool->memorybeginaddress + pool->bitmap.size * 4 * 1024));

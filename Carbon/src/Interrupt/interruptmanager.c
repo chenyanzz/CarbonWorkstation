@@ -1,7 +1,9 @@
 #include "interrupt.h"
 #include "stdio.h"
 #include "intel8259a.h"
+
 IDT idt = { 0 };
+
 void show_idt_table(int begin, int end) {
 	uint64_t idt_operand = (uint64_t)0;
 	asm("sidt %0":"=m"(idt_operand));
@@ -23,18 +25,21 @@ void show_idt_table(int begin, int end) {
 		printk("%d.\t0x%08X  0x%04X-0x%08X\t %01X  %01X  %01X   %01X   %d\n", i, (uint32_t)index, index->selector, ((uint32_t)(index->offset2) << 16) | index->offset1, (tmpattr >> 15) & 0x1, (tmpattr >> 13) & 0x3, (tmpattr >> 12) & 0x1, (tmpattr >> 8) & 0xF, (tmpattr) & 0b00011111);
 	}
 }
+
 void modify_gate(Gate *g, uint32_t offset, uint16_t selector, uint8_t dcount, uint8_t attr) {
 	g->offset1 = offset & 0xFFFF;
 	g->selector = selector;
 	g->attr = (dcount & 0x1F) | ((attr << 8) & 0XFF00);
 	g->offset2 = (offset >> 16) & 0xFFFF;
 }
+
 void set_idt(int index, intr_hander function, uint16_t selector, uint8_t dcount, uint8_t attr) {
 	Gate *tmp;
 	tmp = (Gate *)&idt;
 	tmp = tmp + index;
 	modify_gate(tmp, (uint32_t)function, selector, dcount, attr);
 }
+
 void init_idt() {
 	set_idt(0, divide_error, 0x0008, 0, IDT_DESC_ATTR_DPL0);
 	set_idt(1, single_step_exception, 0x0008, 0, IDT_DESC_ATTR_DPL0);
