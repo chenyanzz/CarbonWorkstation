@@ -9,8 +9,11 @@
 #include "memory.h"
 #include "interrupt.h"
 #include "kmemory.h"
+#include "init.h"
+
 int memory_size;
 void kernel_main();
+
 extern Multiboot *multiboot_ptr;
 extern uint32_t kernel_start[];
 extern uint32_t kernel_end[];
@@ -24,7 +27,7 @@ void kernel_entry() {
 
 void kernel_main() {
 	init_debug(multiboot_ptr);
-	clear();
+    cls();
 	printk("Kernel is running...\n");
 	printk("In the memory:\n");
 	printk("Kernel in memory start: 0x%08X\n", kernel_start);

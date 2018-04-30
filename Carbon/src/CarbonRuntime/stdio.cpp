@@ -1,3 +1,4 @@
+#include <stdio_color.h>
 #include "stdio.h"
 #include "stddef.h"
 #include "stdarg.h"
@@ -18,7 +19,12 @@
 static uint16_t *video_memory = (uint16_t *)(0xB8000);
 static uint8_t cursor_x = 0;
 static uint8_t cursor_y = 0;
-static int vsprintf(char *buff, const char *format, va_list args);
+
+
+static uint8_t attribute_byte = defaultColor;
+
+extern static int vsprintf(char *buff, const char *format, va_list args);
+
 
 
 void printk(const char *format, ...) {
@@ -28,7 +34,7 @@ void printk(const char *format, ...) {
 	int i = vsprintf(buffer, format, args);
 	va_end(args);
 	buffer[i] = '\0';
-	write(buffer);
+	printStr(buffer);
 }
 
 static int skip_atoi(const char **s) {
@@ -183,6 +189,13 @@ static int vsprintf(char *buff, const char *format, va_list args) {
 }
 
 static void move_cursor() {
+
+	if (cursor_x >= 80) {
+		cursor_x = 0;
+		cursor_y++;
+	}
+	scroll();
+
 	uint16_t cursorLocation = cursor_y * 80 + cursor_x;
 	outb(0x3D4, 14);
 	outb(0x3D5, cursorLocation >> 8);
@@ -191,7 +204,6 @@ static void move_cursor() {
 }
 
 static void scroll() {
-	uint8_t attribute_byte = (0 << 4) | (0x5 & 0x0F);
 	uint16_t blank = 0x20 | (attribute_byte << 8);
 	if (cursor_y >= 25) {
 		int i;
@@ -203,8 +215,7 @@ static void scroll() {
 	}
 }
 
-void clear() {
-	uint8_t attribute_byte = (0 << 4) | (0x5 & 0x0F);
+void cls() {
 	uint16_t blank = 0x20 | (attribute_byte << 8);
 	int i;
 	for (i = 0; i < 80 * 25; i++)
@@ -215,9 +226,7 @@ void clear() {
 }
 
 void putchar(char c) {
-	uint8_t back_color = (uint8_t)0;
-	uint8_t front_color = (uint8_t)15;
-	uint8_t attribute_byte = (back_color << 4) | (front_color & 0x0F);
+
 	uint16_t attribute = attribute_byte << 8;
 	if (c == 0x08 && cursor_x) { cursor_x--; }
 	else if (c == 0x09) { cursor_x = (cursor_x + 8) & ~(8 - 1); }
@@ -230,15 +239,27 @@ void putchar(char c) {
 		video_memory[cursor_y * 80 + cursor_x] = c | attribute;
 		cursor_x++;
 	}
-	if (cursor_x >= 80) {
-		cursor_x = 0;
-		cursor_y++;
-	}
-	scroll();
+
 	move_cursor();
 }
 
-void write(char *str) {
+void printStr(char *str) {
 	while (*str)
 		putchar(*str++);
 }
+
+void setCursor(int x,int y)
+{
+	cursor_x=x % SCREEN_WIDTH;
+	cursor_y=y % SCREEN_HEIGHT;
+	move_cursor();
+}
+
+void setTerminalColor(enum TextColor tc, enum BgColor bc, bool blink) {
+	attribute_byte = makeColor(tc, bc) | (blink << 7);
+}
+
+void setTerminalColorByte(uint8_t c) {
+	attribute_byte = c;
+}
+

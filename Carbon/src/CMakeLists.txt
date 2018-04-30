@@ -10,7 +10,7 @@ add_executable(src
         Bootloader/boot.c
         CarbonRuntime/asm.c
         CarbonRuntime/stdelf.c
-        CarbonRuntime/stdio.c
+        CarbonRuntime/stdio.cpp
         CarbonRuntime/string.c
         Include/asm.h
         Include/assert.h
@@ -52,4 +52,4 @@ add_executable(src
         Tool/bochsrc-gdb.txt
         Tool/bochsrc.txt
         Tool/gdbinit
-        Makefile)
+        Makefile Include/stdio_color.h)

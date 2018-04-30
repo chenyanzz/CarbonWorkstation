@@ -3,7 +3,7 @@
  */
 
 #include "PIT_timer.h"
-#include "printf.h"
+#include "stdio_color.h"
 #include "asm.h"
 #include "types.h"
 #include "kernel/interrupt/irq.h"

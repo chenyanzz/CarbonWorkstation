@@ -26,8 +26,8 @@ void boot_entry(void) {
 	}
 
 	asm volatile ("movl %%ebx,%0" : "=m"(multiboot_ptr));
-	
-	clear();
+
+	cls();
 	asm volatile ("cli");
 	printk("Booting...");
 	kernel_entry();
