@@ -1,1 +1,0 @@
-gcc    CMakeFiles/InterruptService.dir/InterruptService.c.o CMakeFiles/InterruptService.dir/__/Runtime/KernelAssembly.c.o CMakeFiles/InterruptService.dir/__/Library/CarbonKernelIO.c.o  -o /home/c4droid/CarbonWorkstation/Restructure/Reformat/Build/InterruptService 
