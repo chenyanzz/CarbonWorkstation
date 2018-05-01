@@ -14,6 +14,6 @@ echo "Generate image"
 cd $ROOT
 cp $GRUB $TARGET
 sudo mount $TARGET $MOUNT
-sudo cp $BUILD/kernel.elf $MOUNT/kernel
+sudo cp $BUILD/kernel.elf $MOUNT/boot
 sudo umount $MOUNT
 echo "Done"
