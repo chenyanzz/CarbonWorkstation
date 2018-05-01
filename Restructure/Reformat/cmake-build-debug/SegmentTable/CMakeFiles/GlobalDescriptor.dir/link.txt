@@ -1,3 +1,0 @@
-"D:\JetBrains\CLion 2018.1.1\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\GlobalDescriptor.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\GlobalDescriptor.dir/objects.a @CMakeFiles\GlobalDescriptor.dir\objects1.rsp
-gcc -g   -Wl,--whole-archive CMakeFiles\GlobalDescriptor.dir/objects.a -Wl,--no-whole-archive  -o ..\..\Build\GlobalDescriptor.exe -Wl,--out-implib,..\..\Build\libGlobalDescriptor.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\GlobalDescriptor.dir\linklibs.rsp

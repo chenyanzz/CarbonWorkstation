@@ -1,7 +1,7 @@
-#include "../Runtime/KernelAssembly.h"
-#include "../Library/CarbonKernelIO.h"
-#include "InterruptService.h"
-#include "InterruptController.h"
+#include "../Include/KernelAssembly.h"
+#include "../Include/CarbonKernelIO.h"
+#include "../Include/InterruptService.h"
+#include "../Include/InterruptController.h"
 #define exception1(x); atomic("movl %ebp,%esp"); \
 	atomic("popl %ebp");  \
 	atomic(x);  \

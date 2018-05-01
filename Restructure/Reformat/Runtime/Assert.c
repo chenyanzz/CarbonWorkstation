@@ -1,6 +1,6 @@
-#include "Assert.h"
-#include "KernelAssembly.h"
-#include "../Bootloader/Bootloader.h"
+#include "../Include/Assert.h"
+#include "../Include/KernelAssembly.h"
+#include "../Include/Bootloader.h"
 static elf_t kernel_elf;
 void Assert(void *exp, void *file, unsigned int line) {
     printk("Assertion failed: %s, File: %s,Line: %d", exp, file, line);

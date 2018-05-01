@@ -1,7 +1,7 @@
-#include "Bootloader.h"
-#include "../Library/CarbonDefine.h"
-#include "../Library/CarbonKernelIO.h"
-#include "../Runtime/KernelAssembly.h"
+#include "../Include/Bootloader.h"
+#include "../Include/CarbonDefine.h"
+#include "../Include/CarbonKernelIO.h"
+#include "../Include/KernelAssembly.h"
 typedef struct __multiboot_header__ {
     uint32_t magic;
     uint32_t flags;

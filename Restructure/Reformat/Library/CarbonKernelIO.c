@@ -1,8 +1,8 @@
-#include "CarbonKernelIO.h"
-#include "CarbonDefine.h"
-#include "CarbonStdArg.h"
-#include "../Runtime/String.h"
-#include "../Runtime/KernelAssembly.h"
+#include "../Include/CarbonKernelIO.h"
+#include "../Include/CarbonDefine.h"
+#include "../Include/CarbonStdArg.h"
+#include "../Include/String.h"
+#include "../Include/KernelAssembly.h"
 #define is_digit(c) ((c) >= '0' && (c) <= '9')
 #define ZEROPAD	1
 #define SIGN 2

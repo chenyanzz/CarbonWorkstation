@@ -1,3 +1,0 @@
-"D:\JetBrains\CLion 2018.1.1\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\CarbonELFDescriptor.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\CarbonELFDescriptor.dir/objects.a @CMakeFiles\CarbonELFDescriptor.dir\objects1.rsp
-gcc -g   -Wl,--whole-archive CMakeFiles\CarbonELFDescriptor.dir/objects.a -Wl,--no-whole-archive  -o ..\..\Build\CarbonELFDescriptor.exe -Wl,--out-implib,..\..\Build\libCarbonELFDescriptor.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CarbonELFDescriptor.dir\linklibs.rsp

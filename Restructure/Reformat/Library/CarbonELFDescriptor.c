@@ -1,7 +1,7 @@
-#include "../Runtime/KernelAssembly.h"
-#include "../Bootloader/Bootloader.h"
-#include "CarbonELFDescriptor.h"
-#include "../Runtime/String.h"
+#include "../Include/KernelAssembly.h"
+#include "../Include/Bootloader.h"
+#include "../Include/CarbonELFDescriptor.h"
+#include "../Include/String.h"
 elf_t elf_from_multiboot(Multiboot *mb) {
     int i;
     elf_t elf;

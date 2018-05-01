@@ -11,228 +11,225 @@
   <component name="ChangeListManager">
     <list default="true" id="81fe101a-beb1-4323-9344-6db76740c3f8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/.idea/Carbon.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/.idea/serialmonitor_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Bootloader/BootLoader.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Bootloader/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/CarbonRuntime/Assert.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/CarbonRuntime/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/CarbonRuntime/CarbonELFDescriptor.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/CarbonRuntime/CarbonKernelIO.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/CarbonRuntime/KernelAssembly.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/CarbonRuntime/String.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/Assert.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/Bootloader.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/CarbonDefine.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/CarbonELFDescriptor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/CarbonKernelIO.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/CarbonStdArg.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/Descriptor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/Gate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/GlobalDescriptor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/InterruptController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/InterruptService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/KernelAssembly.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/Math.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/String.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/Superblock.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Include/TSS.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Interrupt/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Interrupt/InterruptController.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Interrupt/InterruptDescriptor.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Interrupt/InterruptService.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Kernel/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Kernel/Kernel.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Memory/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Memory/GlobalDescriptor.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Script/link.ld" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Tool/GRUB.img" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Tool/bochsrc-gdb.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Tool/bochsrc.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Tool/gdbinit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/Tool/update_image" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/BootLoader.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Bootloader/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Carbon.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Carbon.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Carbon.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Carbon.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Carbon.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Carbon.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Carbon.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Carbon.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Carbon.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Progress/19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Progress/20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Progress/21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Carbon.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/Assert.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonELFDescriptor.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/CarbonKernelIO.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/KernelAssembly.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/String.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/CarbonRuntime/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Interrupt/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Kernel/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/Memory/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Carbon/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Bootloader/Bootloader.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Bootloader/Bootloader.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Bootloader/Bootloader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/Bootloader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Bootloader/CMakeLists.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Restructure/Reformat/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Kernel/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Kernel/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/Gate.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/Gate.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/InterruptController.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/InterruptController.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/InterruptController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/InterruptController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/InterruptDescriptor.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/InterruptDescriptor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/InterruptService.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/InterruptService.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Interrupt/InterruptService.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/InterruptService.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Kernel/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Kernel/Kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Kernel/Kernel.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Library/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Library/CarbonDefine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/CarbonDefine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Library/CarbonELFDescriptor.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Library/CarbonELFDescriptor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Library/CarbonELFDescriptor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/CarbonELFDescriptor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Library/CarbonKernelIO.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Library/CarbonKernelIO.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Library/CarbonKernelIO.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/CarbonKernelIO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Library/CarbonStdArg.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/CarbonStdArg.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Runtime/Assert.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Runtime/Assert.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Runtime/Assert.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/Assert.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Runtime/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Runtime/KernelAssembly.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Runtime/KernelAssembly.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Runtime/KernelAssembly.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/KernelAssembly.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Runtime/String.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Runtime/String.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/Runtime/String.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/String.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/SegmentTable/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/SegmentTable/Descriptor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/Descriptor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/SegmentTable/GlobalDescriptor.c" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/SegmentTable/GlobalDescriptor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/SegmentTable/GlobalDescriptor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Restructure/Reformat/Include/GlobalDescriptor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/Bootloader.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/__/Library/CarbonKernelIO.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/__/Runtime/KernelAssembly.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/includes_C.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/Bootloader.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Bootloader/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Progress/3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Progress/4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Reformat.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Reformat.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Reformat.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Reformat.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Reformat.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Reformat.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Reformat.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Reformat.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/Reformat.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Carbon.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Interrupt/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Kernel/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonELFDescriptor.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonELFDescriptor.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonELFDescriptor.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonELFDescriptor.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonELFDescriptor.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonELFDescriptor.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonELFDescriptor.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonELFDescriptor.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonELFDescriptor.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/CarbonKernelIO.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/__/Runtime/KernelAssembly.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/__/Runtime/String.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/CarbonKernelIO.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Library/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Reformat.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/Assert.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/__/Library/CarbonELFDescriptor.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/__/Library/CarbonKernelIO.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/Assert.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/KernelAssembly.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/String.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/String.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/String.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/String.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/String.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/String.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/String.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/String.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/String.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/Runtime/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/SegmentTable/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Restructure/Reformat/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -247,8 +244,17 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Restructure/Reformat/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Carbon/src/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -357,6 +363,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\CarbonWorkstation\Restructure\Reformat\Include" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -414,7 +425,7 @@
       <workItem from="1524637720236" duration="321000" />
       <workItem from="1524740750441" duration="1494000" />
       <workItem from="1525133691496" duration="7089000" />
-      <workItem from="1525148231920" duration="3321000" />
+      <workItem from="1525148231920" duration="6441000" />
     </task>
     <task id="LOCAL-00001" summary="Update config">
       <created>1524141548709</created>
@@ -465,11 +476,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525150710799</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update code">
+      <created>1525152368803</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1525152368803</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27259000" />
+    <option name="totallyTimeSpent" value="30379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -479,6 +497,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32643312" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32961783" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32961783" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961783" />
       <window_info anchor="bottom" id="Serial Monitor" order="11" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -493,7 +512,6 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32961783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32961783" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +527,8 @@
     <MESSAGE value="Add bool data type and superblock structure" />
     <MESSAGE value="Update the code" />
     <MESSAGE value="Update the Reformat code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the Reformat code" />
+    <MESSAGE value="Update code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -517,8 +536,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Include/descriptor.h" />
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Interrupt/interruptmanager.c" />
     <entry file="file://$PROJECT_DIR$/Carbon/src/Include/stdarg.h" />
     <entry file="file://$PROJECT_DIR$/Carbon/src/Include/tss.h" />
     <entry file="file://$PROJECT_DIR$/Carbon/src/Include/task.h" />
@@ -538,13 +555,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Carbon/src/Memory/kmemory.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbon/src/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
@@ -784,10 +794,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Restructure/Reformat/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/Restructure/Reformat/Tool/update_image">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Restructure/Reformat/Bootloader/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbon/src/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Restructure/Reformat/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,6 @@
-#include "GlobalDescriptor.h"
-#include "../Runtime/KernelAssembly.h"
-#include "../Library/CarbonDefine.h"
+#include "../Include/GlobalDescriptor.h"
+#include "../Include/KernelAssembly.h"
+#include "../Include/CarbonDefine.h"
 GDT *gdt;
 void ModifyDescriptor(Descriptor *desc, uint32_t limit, uint32_t base, uint32_t attr) {
     desc->limit1 = limit & 0xFFFF;

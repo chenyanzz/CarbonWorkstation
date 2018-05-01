@@ -1,7 +1,7 @@
-#include "InterruptService.h"
-#include "InterruptController.h"
-#include "../Runtime/KernelAssembly.h"
-#include "../Library/CarbonKernelIO.h"
+#include "../Include/InterruptService.h"
+#include "../Include/InterruptController.h"
+#include "../Include/KernelAssembly.h"
+#include "../Include/CarbonKernelIO.h"
 IDT idt = { 0 };
 void ModifyGate(Gate *g, uint32_t offset, uint16_t selector, uint8_t dcount, uint8_t attr) {
     g->offset1 = offset & 0xFFFF;

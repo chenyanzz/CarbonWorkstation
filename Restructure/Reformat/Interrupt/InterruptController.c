@@ -1,6 +1,6 @@
-#include "../Runtime/KernelAssembly.h"
-#include "InterruptController.h"
-#include "../Library/CarbonDefine.h"
+#include "../Include/KernelAssembly.h"
+#include "../Include/InterruptController.h"
+#include "../Include/CarbonDefine.h"
 void InitPIC() {
     outb(PIC_M_CTRL, 0x11);
     outb(PIC_M_DATA, 0x20);
