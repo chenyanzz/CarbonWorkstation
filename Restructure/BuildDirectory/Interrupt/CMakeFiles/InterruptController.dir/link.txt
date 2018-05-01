@@ -1,1 +1,0 @@
-gcc    CMakeFiles/InterruptController.dir/InterruptController.c.o CMakeFiles/InterruptController.dir/__/Runtime/KernelAssembly.c.o  -o /home/c4droid/CarbonWorkstation/Restructure/Reformat/Build/InterruptController 

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 set(CMAKE_C_COMPILER gcc)
 set(CMAKE_C_STANDARD 11)
-add_compile_options(-c -Wall -m32 -ggdb -gstabs+ -std=gnu11 -nostdinc -fpack-struct -fno-builtin -fno-stack-protector)
+set(CMAKE_C_FLAGS "-c -Wall -m32 -ggdb -gstabs+ -std=gnu11 -nostdinc -fpack-struct -fno-builtin -fno-stack-protector")
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/Build)
 add_executable(Bootloader Bootloader.c ../Library/CarbonKernelIO.c ../Runtime/KernelAssembly.c Bootloader.h ../Library/CarbonDefine.h)
 set_target_properties(Bootloader PROPERTIES OBJECT .o)

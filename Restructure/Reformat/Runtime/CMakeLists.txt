@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 set(CMAKE_C_COMPILER gcc)
 set(CMAKE_C_STANDARD 11)
-add_compile_options(-c -Wall -m32 -ggdb -gstabs+ -std=gnu11 -nostdinc -fpack-struct -fno-builtin -fno-stack-protector)
+set(CMAKE_C_FLAGS "-c -Wall -m32 -ggdb -gstabs+ -std=gnu11 -nostdinc -fpack-struct -fno-builtin -fno-stack-protector")
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/Build)
 add_executable(Assert Assert.c ../Library/CarbonKernelIO.c ../Library/CarbonELFDescriptor.c Assert.h KernelAssembly.h ../Bootloader/Bootloader.h ../Library/CarbonDefine.h)
 add_executable(KernelAssembly KernelAssembly.c KernelAssembly.h ../Library/CarbonDefine.h ../SegmentTable/Descriptor.h)

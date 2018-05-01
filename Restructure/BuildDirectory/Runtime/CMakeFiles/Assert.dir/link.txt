@@ -1,1 +1,0 @@
-gcc    CMakeFiles/Assert.dir/Assert.c.o CMakeFiles/Assert.dir/__/Library/CarbonKernelIO.c.o CMakeFiles/Assert.dir/__/Library/CarbonELFDescriptor.c.o  -o /home/c4droid/CarbonWorkstation/Restructure/Reformat/Build/Assert 
