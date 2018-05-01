@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.5)
+project(Reformat)
+add_subdirectory(Bootloader)
+add_subdirectory(Library)
+add_subdirectory(Runtime)
+add_subdirectory(SegmentTable)

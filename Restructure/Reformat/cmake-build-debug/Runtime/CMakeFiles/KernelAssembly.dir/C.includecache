@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Project/CarbonWorkstation/Restructure/Reformat/Bootloader/Bootloader.h
+../Library/CarbonDefine.h
+D:/Project/CarbonWorkstation/Restructure/Reformat/Library/CarbonDefine.h
+
+D:/Project/CarbonWorkstation/Restructure/Reformat/Library/CarbonDefine.h
+
+D:/Project/CarbonWorkstation/Restructure/Reformat/Runtime/KernelAssembly.c
+KernelAssembly.h
+D:/Project/CarbonWorkstation/Restructure/Reformat/Runtime/KernelAssembly.h
+../Library/CarbonDefine.h
+D:/Project/CarbonWorkstation/Restructure/Reformat/Library/CarbonDefine.h
+
+D:/Project/CarbonWorkstation/Restructure/Reformat/Runtime/KernelAssembly.h
+../Library/CarbonDefine.h
+D:/Project/CarbonWorkstation/Restructure/Reformat/Library/CarbonDefine.h
+../SegmentTable/Descriptor.h
+D:/Project/CarbonWorkstation/Restructure/Reformat/SegmentTable/Descriptor.h
+
+D:/Project/CarbonWorkstation/Restructure/Reformat/SegmentTable/Descriptor.h
+../Bootloader/Bootloader.h
+D:/Project/CarbonWorkstation/Restructure/Reformat/Bootloader/Bootloader.h
+../Library/CarbonDefine.h
+D:/Project/CarbonWorkstation/Restructure/Reformat/Library/CarbonDefine.h
+
