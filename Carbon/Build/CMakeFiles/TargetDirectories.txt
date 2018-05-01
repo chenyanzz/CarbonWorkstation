@@ -1,0 +1,3 @@
+/home/c4droid/CarbonWorkstation/Carbon/Build/CMakeFiles/rebuild_cache.dir
+/home/c4droid/CarbonWorkstation/Carbon/Build/CMakeFiles/kernel.elf.dir
+/home/c4droid/CarbonWorkstation/Carbon/Build/CMakeFiles/edit_cache.dir
