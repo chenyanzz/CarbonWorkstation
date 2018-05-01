@@ -1,0 +1,1 @@
+gcc    CMakeFiles/Bootloader.dir/Bootloader.c.o CMakeFiles/Bootloader.dir/__/Library/CarbonKernelIO.c.o CMakeFiles/Bootloader.dir/__/Runtime/KernelAssembly.c.o  -o /home/c4droid/CarbonWorkstation/Restructure/Reformat/Build/Bootloader 

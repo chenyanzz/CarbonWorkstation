@@ -1,3 +1,0 @@
-"D:\JetBrains\CLion 2018.1.1\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\KernelAssembly.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\KernelAssembly.dir/objects.a @CMakeFiles\KernelAssembly.dir\objects1.rsp
-gcc -g   -Wl,--whole-archive CMakeFiles\KernelAssembly.dir/objects.a -Wl,--no-whole-archive  -o ..\..\Build\KernelAssembly.o -Wl,--out-implib,..\..\Build\libKernelAssembly.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\KernelAssembly.dir\linklibs.rsp

@@ -1,3 +1,0 @@
-"D:\JetBrains\CLion 2018.1.1\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\InterruptController.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\InterruptController.dir/objects.a @CMakeFiles\InterruptController.dir\objects1.rsp
-gcc -g   -Wl,--whole-archive CMakeFiles\InterruptController.dir/objects.a -Wl,--no-whole-archive  -o ..\..\Build\InterruptController.o -Wl,--out-implib,..\..\Build\libInterruptController.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\InterruptController.dir\linklibs.rsp

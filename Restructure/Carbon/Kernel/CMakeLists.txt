@@ -1,7 +1,0 @@
-cmake_minimum_required(VERSION 3.10)
-set(CMAKE_C_COMPILER gcc)
-add_compile_options(-c -Wall -m32 -ggdb -gstabs+ -std=gnu11 -nostdinc -fpack-struct -fno-builtin -fno-stack-protector)
-include_directories(${CARBON_SOURCE_DIR}/Include)
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/Build)
-add_executable(kernel Kernel.c ../CarbonRuntime/ ../Bootloader ../Interrupt ../Memory)
-set_target_properties(kernel PROPERTIES SUFFIX .o)

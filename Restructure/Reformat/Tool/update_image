@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+ld -T ../Script/link.ld -m elf_i386 -nostdlib ../Build/*.o -o ../Build/kernel.elf
+test -d /mnt/Carbon || mkdir -p /mnt/Carbon
+cp GRUB.img Carbon.img
+sudo mount Carbon.img /mnt/Carbon
+sudo cp ../Build/kernel.elf /mnt/Carbon/kernel/
+sudo umount /mnt/Carbon
+mv Carbon.img ../Build
+sudo rm -rf /mnt/Carbon

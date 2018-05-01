@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.5)
+set(CMAKE_C_COMPILER gcc)
+set(CMAKE_C_STANDARD 11)
+add_compile_options(-c -Wall -m32 -ggdb -gstabs+ -std=gnu11 -nostdinc -fpack-struct -fno-builtin -fno-stack-protector)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/Build)
+add_executable(GlobalDescriptor GlobalDescriptor.c ../Runtime/KernelAssembly.c GlobalDescriptor.h Descriptor.h ../Bootloader/Bootloader.h ../Library/CarbonDefine.h)
+set_target_properties(GlobalDescriptor PROPERTIES OBJECT .o)

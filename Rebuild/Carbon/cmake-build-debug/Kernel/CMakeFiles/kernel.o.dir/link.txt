@@ -1,3 +1,0 @@
-"D:\JetBrains\CLion 2018.1.1\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\kernel.o.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\kernel.o.dir/objects.a @CMakeFiles\kernel.o.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\kernel.o.dir/objects.a -Wl,--no-whole-archive  -o kernel.o.exe -Wl,--out-implib,libkernel.o.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\kernel.o.dir\linklibs.rsp

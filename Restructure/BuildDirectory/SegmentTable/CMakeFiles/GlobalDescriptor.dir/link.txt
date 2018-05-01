@@ -1,0 +1,1 @@
+gcc    CMakeFiles/GlobalDescriptor.dir/GlobalDescriptor.c.o CMakeFiles/GlobalDescriptor.dir/__/Runtime/KernelAssembly.c.o  -o /home/c4droid/CarbonWorkstation/Restructure/Reformat/Build/GlobalDescriptor 

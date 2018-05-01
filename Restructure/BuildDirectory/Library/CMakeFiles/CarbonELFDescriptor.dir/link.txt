@@ -1,0 +1,1 @@
+gcc    CMakeFiles/CarbonELFDescriptor.dir/CarbonELFDescriptor.c.o CMakeFiles/CarbonELFDescriptor.dir/__/Runtime/KernelAssembly.c.o CMakeFiles/CarbonELFDescriptor.dir/__/Runtime/String.c.o  -o /home/c4droid/CarbonWorkstation/Restructure/Reformat/Build/CarbonELFDescriptor 
