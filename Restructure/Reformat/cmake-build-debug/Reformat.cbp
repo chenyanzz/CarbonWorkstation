@@ -5,7 +5,7 @@
 		<Option title="Reformat"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Bootloader\;CMake Files\Library\;CMake Files\Runtime\;CMake Files\SegmentTable\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Bootloader\;CMake Files\Library\;CMake Files\Runtime\;CMake Files\SegmentTable\;CMake Files\Interrupt\;CMake Files\Kernel\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug"/>
@@ -345,7 +345,186 @@
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/SegmentTable/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="InterruptController">
+				<Option output="D:/Project/CarbonWorkstation/Restructure/Reformat/Build/InterruptController.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/CarbonWorkstation/Restructure/Reformat/Build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 InterruptController"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InterruptController/fast">
+				<Option output="D:/Project/CarbonWorkstation/Restructure/Reformat/Build/InterruptController.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/CarbonWorkstation/Restructure/Reformat/Build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 InterruptController/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InterruptDescriptor">
+				<Option output="D:/Project/CarbonWorkstation/Restructure/Reformat/Build/InterruptDescriptor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/CarbonWorkstation/Restructure/Reformat/Build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 InterruptDescriptor"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InterruptDescriptor/fast">
+				<Option output="D:/Project/CarbonWorkstation/Restructure/Reformat/Build/InterruptDescriptor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/CarbonWorkstation/Restructure/Reformat/Build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 InterruptDescriptor/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InterruptService">
+				<Option output="D:/Project/CarbonWorkstation/Restructure/Reformat/Build/InterruptService.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/CarbonWorkstation/Restructure/Reformat/Build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 InterruptService"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InterruptService/fast">
+				<Option output="D:/Project/CarbonWorkstation/Restructure/Reformat/Build/InterruptService.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/CarbonWorkstation/Restructure/Reformat/Build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 InterruptService/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Kernel">
+				<Option output="D:/Project/CarbonWorkstation/Restructure/Reformat/Build/Kernel.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/CarbonWorkstation/Restructure/Reformat/Build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/Makefile&quot;  VERBOSE=1 Kernel"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Kernel/fast">
+				<Option output="D:/Project/CarbonWorkstation/Restructure/Reformat/Build/Kernel.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/CarbonWorkstation/Restructure/Reformat/Build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/Makefile&quot;  VERBOSE=1 Kernel/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Bootloader">
+			<Option target="Kernel"/>
+		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Bootloader/Bootloader.c">
 			<Option target="Bootloader"/>
 		</Unit>
@@ -355,6 +534,36 @@
 			<Option target="Assert"/>
 			<Option target="GlobalDescriptor"/>
 		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Interrupt">
+			<Option target="Kernel"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Interrupt/Gate.h">
+			<Option target="InterruptController"/>
+			<Option target="InterruptService"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Interrupt/InterruptController.c">
+			<Option target="InterruptController"/>
+			<Option target="InterruptDescriptor"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Interrupt/InterruptController.h">
+			<Option target="InterruptController"/>
+			<Option target="InterruptService"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Interrupt/InterruptDescriptor.c">
+			<Option target="InterruptDescriptor"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Interrupt/InterruptService.c">
+			<Option target="InterruptService"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Interrupt/InterruptService.h">
+			<Option target="InterruptService"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Kernel/Kernel.c">
+			<Option target="Kernel"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Library">
+			<Option target="Kernel"/>
+		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Library/CarbonDefine.h">
 			<Option target="Bootloader"/>
 			<Option target="CarbonKernelIO"/>
@@ -362,6 +571,7 @@
 			<Option target="KernelAssembly"/>
 			<Option target="String"/>
 			<Option target="GlobalDescriptor"/>
+			<Option target="InterruptController"/>
 		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Library/CarbonELFDescriptor.c">
 			<Option target="CarbonELFDescriptor"/>
@@ -374,14 +584,21 @@
 			<Option target="Bootloader"/>
 			<Option target="CarbonKernelIO"/>
 			<Option target="Assert"/>
+			<Option target="InterruptDescriptor"/>
+			<Option target="InterruptService"/>
 		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Library/CarbonKernelIO.h">
 			<Option target="Bootloader"/>
 			<Option target="CarbonKernelIO"/>
 			<Option target="Assert"/>
+			<Option target="InterruptDescriptor"/>
+			<Option target="InterruptService"/>
 		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Library/CarbonStdArg.h">
 			<Option target="CarbonKernelIO"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Runtime">
+			<Option target="Kernel"/>
 		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Runtime/Assert.c">
 			<Option target="Assert"/>
@@ -397,6 +614,9 @@
 			<Option target="CarbonELFDescriptor"/>
 			<Option target="KernelAssembly"/>
 			<Option target="GlobalDescriptor"/>
+			<Option target="InterruptController"/>
+			<Option target="InterruptDescriptor"/>
+			<Option target="InterruptService"/>
 		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Runtime/KernelAssembly.h">
 			<Option target="Assert"/>
@@ -409,6 +629,9 @@
 		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Runtime/String.h">
 			<Option target="String"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/SegmentTable">
+			<Option target="Kernel"/>
 		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/SegmentTable/Descriptor.h">
 			<Option target="KernelAssembly"/>
@@ -434,6 +657,12 @@
 		</Unit>
 		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/SegmentTable/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\SegmentTable\"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Interrupt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Interrupt\"/>
+		</Unit>
+		<Unit filename="D:/Project/CarbonWorkstation/Restructure/Reformat/Kernel/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Kernel\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

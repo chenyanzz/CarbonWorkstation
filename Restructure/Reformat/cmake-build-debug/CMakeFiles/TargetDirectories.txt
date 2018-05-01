@@ -15,3 +15,11 @@ D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Runtime/CMak
 D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/GlobalDescriptor.dir
 D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/edit_cache.dir
 D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/SegmentTable/CMakeFiles/rebuild_cache.dir
+D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/edit_cache.dir
+D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir
+D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir
+D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir
+D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/CMakeFiles/rebuild_cache.dir
+D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/edit_cache.dir
+D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/Kernel.dir
+D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/CMakeFiles/rebuild_cache.dir

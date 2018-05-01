@@ -200,6 +200,58 @@ GlobalDescriptor/fast:
 	$(MAKE) -f SegmentTable\CMakeFiles\GlobalDescriptor.dir\build.make SegmentTable/CMakeFiles/GlobalDescriptor.dir/build
 .PHONY : GlobalDescriptor/fast
 
+#=============================================================================
+# Target rules for targets named InterruptController
+
+# Build rule for target.
+InterruptController: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 InterruptController
+.PHONY : InterruptController
+
+# fast build rule for target.
+InterruptController/fast:
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptController.dir\build.make Interrupt/CMakeFiles/InterruptController.dir/build
+.PHONY : InterruptController/fast
+
+#=============================================================================
+# Target rules for targets named InterruptDescriptor
+
+# Build rule for target.
+InterruptDescriptor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 InterruptDescriptor
+.PHONY : InterruptDescriptor
+
+# fast build rule for target.
+InterruptDescriptor/fast:
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptDescriptor.dir\build.make Interrupt/CMakeFiles/InterruptDescriptor.dir/build
+.PHONY : InterruptDescriptor/fast
+
+#=============================================================================
+# Target rules for targets named InterruptService
+
+# Build rule for target.
+InterruptService: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 InterruptService
+.PHONY : InterruptService
+
+# fast build rule for target.
+InterruptService/fast:
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptService.dir\build.make Interrupt/CMakeFiles/InterruptService.dir/build
+.PHONY : InterruptService/fast
+
+#=============================================================================
+# Target rules for targets named Kernel
+
+# Build rule for target.
+Kernel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Kernel
+.PHONY : Kernel
+
+# fast build rule for target.
+Kernel/fast:
+	$(MAKE) -f Kernel\CMakeFiles\Kernel.dir\build.make Kernel/CMakeFiles/Kernel.dir/build
+.PHONY : Kernel/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -215,6 +267,10 @@ help:
 	@echo ... KernelAssembly
 	@echo ... String
 	@echo ... GlobalDescriptor
+	@echo ... InterruptController
+	@echo ... InterruptDescriptor
+	@echo ... InterruptService
+	@echo ... Kernel
 .PHONY : help
 
 

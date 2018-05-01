@@ -32,6 +32,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/JetBrains/CLion 2018.1.1/bin/cmake/share/cmake-3.10/Modules/ProcessorCount.cmake"
   "../Bootloader/CMakeLists.txt"
   "../CMakeLists.txt"
+  "../Interrupt/CMakeLists.txt"
+  "../Kernel/CMakeLists.txt"
   "../Library/CMakeLists.txt"
   "../Runtime/CMakeLists.txt"
   "../SegmentTable/CMakeLists.txt"
@@ -54,6 +56,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Library/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Runtime/CMakeFiles/CMakeDirectoryInformation.cmake"
   "SegmentTable/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Interrupt/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Kernel/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -65,4 +69,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "Runtime/CMakeFiles/KernelAssembly.dir/DependInfo.cmake"
   "Runtime/CMakeFiles/String.dir/DependInfo.cmake"
   "SegmentTable/CMakeFiles/GlobalDescriptor.dir/DependInfo.cmake"
+  "Interrupt/CMakeFiles/InterruptController.dir/DependInfo.cmake"
+  "Interrupt/CMakeFiles/InterruptDescriptor.dir/DependInfo.cmake"
+  "Interrupt/CMakeFiles/InterruptService.dir/DependInfo.cmake"
+  "Kernel/CMakeFiles/Kernel.dir/DependInfo.cmake"
   )

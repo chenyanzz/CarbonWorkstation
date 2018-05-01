@@ -273,7 +273,7 @@ clean: Runtime/CMakeFiles/Assert.dir/clean
 Runtime/CMakeFiles/KernelAssembly.dir/all:
 	$(MAKE) -f Runtime\CMakeFiles\KernelAssembly.dir\build.make Runtime/CMakeFiles/KernelAssembly.dir/depend
 	$(MAKE) -f Runtime\CMakeFiles\KernelAssembly.dir\build.make Runtime/CMakeFiles/KernelAssembly.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles --progress-num=20,21 "Built target KernelAssembly"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles --progress-num=34,35 "Built target KernelAssembly"
 .PHONY : Runtime/CMakeFiles/KernelAssembly.dir/all
 
 # Include target in all.
@@ -310,7 +310,7 @@ clean: Runtime/CMakeFiles/KernelAssembly.dir/clean
 Runtime/CMakeFiles/String.dir/all:
 	$(MAKE) -f Runtime\CMakeFiles\String.dir\build.make Runtime/CMakeFiles/String.dir/depend
 	$(MAKE) -f Runtime\CMakeFiles\String.dir\build.make Runtime/CMakeFiles/String.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles --progress-num=22,23,24 "Built target String"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles --progress-num=36,37,38 "Built target String"
 .PHONY : Runtime/CMakeFiles/String.dir/all
 
 # Include target in all.
@@ -392,6 +392,194 @@ SegmentTable/CMakeFiles/GlobalDescriptor.dir/clean:
 
 # clean rule for target.
 clean: SegmentTable/CMakeFiles/GlobalDescriptor.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Interrupt
+
+# Convenience name for "all" pass in the directory.
+Interrupt/all: Interrupt/CMakeFiles/InterruptController.dir/all
+Interrupt/all: Interrupt/CMakeFiles/InterruptDescriptor.dir/all
+Interrupt/all: Interrupt/CMakeFiles/InterruptService.dir/all
+
+.PHONY : Interrupt/all
+
+# Convenience name for "clean" pass in the directory.
+Interrupt/clean: Interrupt/CMakeFiles/InterruptController.dir/clean
+Interrupt/clean: Interrupt/CMakeFiles/InterruptDescriptor.dir/clean
+Interrupt/clean: Interrupt/CMakeFiles/InterruptService.dir/clean
+
+.PHONY : Interrupt/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Interrupt/preinstall:
+
+.PHONY : Interrupt/preinstall
+
+#=============================================================================
+# Target rules for target Interrupt/CMakeFiles/InterruptController.dir
+
+# All Build rule for target.
+Interrupt/CMakeFiles/InterruptController.dir/all:
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptController.dir\build.make Interrupt/CMakeFiles/InterruptController.dir/depend
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptController.dir\build.make Interrupt/CMakeFiles/InterruptController.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles --progress-num=20,21,22 "Built target InterruptController"
+.PHONY : Interrupt/CMakeFiles/InterruptController.dir/all
+
+# Include target in all.
+all: Interrupt/CMakeFiles/InterruptController.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Interrupt/CMakeFiles/InterruptController.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles 3
+	$(MAKE) -f CMakeFiles\Makefile2 Interrupt/CMakeFiles/InterruptController.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles 0
+.PHONY : Interrupt/CMakeFiles/InterruptController.dir/rule
+
+# Convenience name for target.
+InterruptController: Interrupt/CMakeFiles/InterruptController.dir/rule
+
+.PHONY : InterruptController
+
+# clean rule for target.
+Interrupt/CMakeFiles/InterruptController.dir/clean:
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptController.dir\build.make Interrupt/CMakeFiles/InterruptController.dir/clean
+.PHONY : Interrupt/CMakeFiles/InterruptController.dir/clean
+
+# clean rule for target.
+clean: Interrupt/CMakeFiles/InterruptController.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Interrupt/CMakeFiles/InterruptDescriptor.dir
+
+# All Build rule for target.
+Interrupt/CMakeFiles/InterruptDescriptor.dir/all:
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptDescriptor.dir\build.make Interrupt/CMakeFiles/InterruptDescriptor.dir/depend
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptDescriptor.dir\build.make Interrupt/CMakeFiles/InterruptDescriptor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles --progress-num=23,24,25,26,27 "Built target InterruptDescriptor"
+.PHONY : Interrupt/CMakeFiles/InterruptDescriptor.dir/all
+
+# Include target in all.
+all: Interrupt/CMakeFiles/InterruptDescriptor.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Interrupt/CMakeFiles/InterruptDescriptor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles 5
+	$(MAKE) -f CMakeFiles\Makefile2 Interrupt/CMakeFiles/InterruptDescriptor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles 0
+.PHONY : Interrupt/CMakeFiles/InterruptDescriptor.dir/rule
+
+# Convenience name for target.
+InterruptDescriptor: Interrupt/CMakeFiles/InterruptDescriptor.dir/rule
+
+.PHONY : InterruptDescriptor
+
+# clean rule for target.
+Interrupt/CMakeFiles/InterruptDescriptor.dir/clean:
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptDescriptor.dir\build.make Interrupt/CMakeFiles/InterruptDescriptor.dir/clean
+.PHONY : Interrupt/CMakeFiles/InterruptDescriptor.dir/clean
+
+# clean rule for target.
+clean: Interrupt/CMakeFiles/InterruptDescriptor.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Interrupt/CMakeFiles/InterruptService.dir
+
+# All Build rule for target.
+Interrupt/CMakeFiles/InterruptService.dir/all:
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptService.dir\build.make Interrupt/CMakeFiles/InterruptService.dir/depend
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptService.dir\build.make Interrupt/CMakeFiles/InterruptService.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles --progress-num=28,29,30,31 "Built target InterruptService"
+.PHONY : Interrupt/CMakeFiles/InterruptService.dir/all
+
+# Include target in all.
+all: Interrupt/CMakeFiles/InterruptService.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Interrupt/CMakeFiles/InterruptService.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles 4
+	$(MAKE) -f CMakeFiles\Makefile2 Interrupt/CMakeFiles/InterruptService.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles 0
+.PHONY : Interrupt/CMakeFiles/InterruptService.dir/rule
+
+# Convenience name for target.
+InterruptService: Interrupt/CMakeFiles/InterruptService.dir/rule
+
+.PHONY : InterruptService
+
+# clean rule for target.
+Interrupt/CMakeFiles/InterruptService.dir/clean:
+	$(MAKE) -f Interrupt\CMakeFiles\InterruptService.dir\build.make Interrupt/CMakeFiles/InterruptService.dir/clean
+.PHONY : Interrupt/CMakeFiles/InterruptService.dir/clean
+
+# clean rule for target.
+clean: Interrupt/CMakeFiles/InterruptService.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Kernel
+
+# Convenience name for "all" pass in the directory.
+Kernel/all: Kernel/CMakeFiles/Kernel.dir/all
+
+.PHONY : Kernel/all
+
+# Convenience name for "clean" pass in the directory.
+Kernel/clean: Kernel/CMakeFiles/Kernel.dir/clean
+
+.PHONY : Kernel/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Kernel/preinstall:
+
+.PHONY : Kernel/preinstall
+
+#=============================================================================
+# Target rules for target Kernel/CMakeFiles/Kernel.dir
+
+# All Build rule for target.
+Kernel/CMakeFiles/Kernel.dir/all:
+	$(MAKE) -f Kernel\CMakeFiles\Kernel.dir\build.make Kernel/CMakeFiles/Kernel.dir/depend
+	$(MAKE) -f Kernel\CMakeFiles\Kernel.dir\build.make Kernel/CMakeFiles/Kernel.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles --progress-num=32,33 "Built target Kernel"
+.PHONY : Kernel/CMakeFiles/Kernel.dir/all
+
+# Include target in all.
+all: Kernel/CMakeFiles/Kernel.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Kernel/CMakeFiles/Kernel.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 Kernel/CMakeFiles/Kernel.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\CarbonWorkstation\Restructure\Reformat\cmake-build-debug\CMakeFiles 0
+.PHONY : Kernel/CMakeFiles/Kernel.dir/rule
+
+# Convenience name for target.
+Kernel: Kernel/CMakeFiles/Kernel.dir/rule
+
+.PHONY : Kernel
+
+# clean rule for target.
+Kernel/CMakeFiles/Kernel.dir/clean:
+	$(MAKE) -f Kernel\CMakeFiles\Kernel.dir\build.make Kernel/CMakeFiles/Kernel.dir/clean
+.PHONY : Kernel/CMakeFiles/Kernel.dir/clean
+
+# clean rule for target.
+clean: Kernel/CMakeFiles/Kernel.dir/clean
 
 .PHONY : clean
 

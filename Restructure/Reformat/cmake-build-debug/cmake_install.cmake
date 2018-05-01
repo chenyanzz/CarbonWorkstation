@@ -38,6 +38,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Library/cmake_install.cmake")
   include("D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Runtime/cmake_install.cmake")
   include("D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/SegmentTable/cmake_install.cmake")
+  include("D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Interrupt/cmake_install.cmake")
+  include("D:/Project/CarbonWorkstation/Restructure/Reformat/cmake-build-debug/Kernel/cmake_install.cmake")
 
 endif()
 

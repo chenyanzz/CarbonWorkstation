@@ -2,13 +2,17 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="Reformat" targetName="GlobalDescriptor" />
-      <config projectName="Reformat" targetName="KernelAssembly" />
-      <config projectName="Reformat" targetName="Assert" />
-      <config projectName="Reformat" targetName="CarbonKernelIO" />
-      <config projectName="Reformat" targetName="Bootloader" />
-      <config projectName="Reformat" targetName="String" />
-      <config projectName="Reformat" targetName="CarbonELFDescriptor" />
+      <config projectName="Carbon" targetName="String" />
+      <config projectName="Carbon" targetName="GlobalDescriptor" />
+      <config projectName="Carbon" targetName="InterruptService" />
+      <config projectName="Carbon" targetName="InterruptDescriptor" />
+      <config projectName="Carbon" targetName="CarbonELFDescriptor" />
+      <config projectName="Carbon" targetName="Assert" />
+      <config projectName="Carbon" targetName="InterruptController" />
+      <config projectName="Carbon" targetName="Bootloader" />
+      <config projectName="Carbon" targetName="CarbonKernelIO" />
+      <config projectName="Carbon" targetName="Kernel" />
+      <config projectName="Carbon" targetName="KernelAssembly" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -18,256 +22,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c5473f0-887a-493a-a149-6d8180ae40a0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Reformat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootloader/Bootloader.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootloader/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/CarbonDefine.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/CarbonELFDescriptor.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/CarbonELFDescriptor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/CarbonKernelIO.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/CarbonKernelIO.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Runtime/Assert.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Runtime/Assert.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Runtime/KernelAssembly.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Runtime/String.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Runtime/String.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SegmentTable/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SegmentTable/Descriptor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SegmentTable/GlobalDescriptor.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SegmentTable/GlobalDescriptor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interrupt/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interrupt/Gate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interrupt/InterruptController.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interrupt/InterruptController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interrupt/InterruptDescriptor.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interrupt/InterruptService.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interrupt/InterruptService.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kernel/Kernel.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/.idea/Carbon.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/.idea/serialmonitor_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Bootloader/BootLoader.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Bootloader/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/CarbonKernelRuntime/Assert.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/CarbonKernelRuntime/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/CarbonKernelRuntime/CarbonELFDescriptor.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/CarbonKernelRuntime/CarbonKernelIO.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/CarbonKernelRuntime/KernelAssembly.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/CarbonKernelRuntime/String.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/Assert.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/Bootloader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Bootloader/Bootloader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/CarbonDefine.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/CarbonELFDescriptor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/CarbonKernelIO.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/CarbonStdArg.h" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CarbonStdArg.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/Descriptor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/Gate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/GlobalDescriptor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/InterruptController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/InterruptService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/KernelAssembly.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/Math.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/String.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/Superblock.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Include/TSS.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Interrupt/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Interrupt/InterruptController.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Interrupt/InterruptDescriptor.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Interrupt/InterruptService.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Kernel/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Kernel/Kernel.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Memory/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Memory/GlobalDescriptor.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Script/link.ld" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Tool/GRUB.img" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Tool/bochsrc-gdb.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Tool/bochsrc.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Tool/gdbinit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/Tool/update_image" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/BootLoader.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/bootloader.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Bootloader/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Carbon.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/Assert.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/Assert.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonELFDescriptor.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/CarbonKernelIO.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/KernelAssembly.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/String.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/String.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/CarbonKernelRuntime/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptController.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptDescriptor.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/InterruptService.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Interrupt/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/kernel.o.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Kernel/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/includes_C.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/GlobalDescriptor.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/Memory/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Rebuild/Carbon/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Carbon/Include/Assert.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Carbon/Include/Assert.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Carbon/Include/CarbonDefine.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Carbon/Include/CarbonDefine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Reformat.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Reformat.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Runtime/CMakeFiles/KernelAssembly.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Runtime/CMakeFiles/String.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Runtime/CMakeFiles/String.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -313,7 +88,6 @@
         <option value="$PROJECT_DIR$/Library/CarbonKernelIO.h" />
         <option value="$PROJECT_DIR$/Runtime/Assert.h" />
         <option value="$PROJECT_DIR$/Runtime/String.c" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/SegmentTable/Descriptor.h" />
         <option value="$PROJECT_DIR$/Runtime/String.h" />
         <option value="$PROJECT_DIR$/Bootloader/Bootloader.c" />
@@ -327,6 +101,16 @@
         <option value="$PROJECT_DIR$/Library/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/SegmentTable/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Runtime/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Interrupt/Gate.h" />
+        <option value="$PROJECT_DIR$/Interrupt/InterruptController.h" />
+        <option value="$PROJECT_DIR$/Interrupt/InterruptService.h" />
+        <option value="$PROJECT_DIR$/Interrupt/InterruptController.c" />
+        <option value="$PROJECT_DIR$/Interrupt/InterruptDescriptor.c" />
+        <option value="$PROJECT_DIR$/Interrupt/InterruptService.c" />
+        <option value="$PROJECT_DIR$/Interrupt/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Kernel/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Kernel/Kernel.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -358,7 +142,7 @@
         <subPane>
           <expand>
             <path>
-              <item name="Reformat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Carbon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Reformat" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -374,6 +158,9 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\CarbonWorkstation\Restructure\Reformat" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Project\CarbonWorkstation\Restructure\Reformat\Runtime" />
       <recent name="D:\Project\CarbonWorkstation\Restructure\Reformat\Bootloader" />
@@ -392,17 +179,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Assert">
-    <configuration name="Assert" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Reformat" TARGET_NAME="Assert" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Reformat" RUN_TARGET_NAME="Assert" />
-    <configuration name="Bootloader" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Reformat" TARGET_NAME="Bootloader" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Reformat" RUN_TARGET_NAME="Bootloader" />
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Reformat" RUN_TARGET_NAME="Bootloader" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="CarbonELFDescriptor" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Reformat" TARGET_NAME="CarbonELFDescriptor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Reformat" RUN_TARGET_NAME="CarbonELFDescriptor" />
-    <configuration name="CarbonKernelIO" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Reformat" TARGET_NAME="CarbonKernelIO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Reformat" RUN_TARGET_NAME="CarbonKernelIO" />
-    <configuration name="GlobalDescriptor" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Reformat" TARGET_NAME="GlobalDescriptor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Reformat" RUN_TARGET_NAME="GlobalDescriptor" />
-    <configuration name="KernelAssembly" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Reformat" TARGET_NAME="KernelAssembly" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Reformat" RUN_TARGET_NAME="KernelAssembly" />
-    <configuration name="String" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Reformat" TARGET_NAME="String" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Reformat" RUN_TARGET_NAME="String" />
+    <configuration name="Assert" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="Assert" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="Assert" />
+    <configuration name="Bootloader" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="Bootloader" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="Bootloader" />
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="Bootloader" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="CarbonELFDescriptor" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="CarbonELFDescriptor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="CarbonELFDescriptor" />
+    <configuration name="CarbonKernelIO" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="CarbonKernelIO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="CarbonKernelIO" />
+    <configuration name="GlobalDescriptor" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="GlobalDescriptor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="GlobalDescriptor" />
+    <configuration name="InterruptController" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="InterruptController" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="InterruptController" />
+    <configuration name="InterruptDescriptor" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="InterruptDescriptor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="InterruptDescriptor" />
+    <configuration name="InterruptService" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="InterruptService" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="InterruptService" />
+    <configuration name="Kernel" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="Kernel" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="Kernel" />
+    <configuration name="KernelAssembly" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="KernelAssembly" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="KernelAssembly" />
+    <configuration name="String" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Carbon" TARGET_NAME="String" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Carbon" RUN_TARGET_NAME="String" />
     <list>
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.Bootloader" />
+      <item itemvalue="Application.InterruptController" />
+      <item itemvalue="Application.InterruptDescriptor" />
+      <item itemvalue="Application.InterruptService" />
+      <item itemvalue="Application.Kernel" />
       <item itemvalue="Application.CarbonELFDescriptor" />
       <item itemvalue="Application.CarbonKernelIO" />
       <item itemvalue="Application.Assert" />
@@ -422,19 +217,19 @@
       <option name="presentableId" value="Default" />
       <updated>1525134003106</updated>
       <workItem from="1525134004981" duration="7291000" />
+      <workItem from="1525148102735" duration="2434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7291000" />
+    <option name="totallyTimeSpent" value="9725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14860907" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14787701" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Messages" weight="0.32961783" />
-      <window_info anchor="bottom" id="CMake" order="4" weight="0.32961783" />
+      <window_info anchor="bottom" id="CMake" order="4" visible="true" weight="0.32961783" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Serial Monitor" order="1" />
@@ -443,13 +238,14 @@
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32961783" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,9 +255,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Library/CarbonDefine.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -480,9 +273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-          <folding>
-            <element signature="e#60#97#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -490,9 +280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#50#86#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -514,9 +301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="e#42#79#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -541,9 +325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-          <folding>
-            <element signature="e#1#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -551,9 +332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,9 +339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -581,24 +356,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bootloader/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="95" selection-start-line="5" selection-start-column="95" selection-end-line="5" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Library/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -620,9 +381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,9 +388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -640,6 +395,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interrupt/Gate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interrupt/InterruptService.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interrupt/InterruptController.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interrupt/InterruptDescriptor.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#4#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interrupt/InterruptController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interrupt/InterruptService.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interrupt/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interrupt/InterruptService.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#54#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bootloader/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kernel/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kernel/Kernel.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#1#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tool/update_image">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
