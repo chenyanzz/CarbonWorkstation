@@ -1,3 +1,0 @@
-"D:\JetBrains\CLion 2018.1.1\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\bootloader.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\bootloader.dir/objects.a @CMakeFiles\bootloader.dir\objects1.rsp
-gcc -g   -Wl,--whole-archive CMakeFiles\bootloader.dir/objects.a -Wl,--no-whole-archive  -o ..\..\Build\bootloader.o -Wl,--out-implib,..\..\Build\libbootloader.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\bootloader.dir\linklibs.rsp
