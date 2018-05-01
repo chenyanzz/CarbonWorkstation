@@ -1,3 +1,4 @@
+OUTPUT_ARCH(i386)
 ENTRY(BootEntry)
 SECTIONS {
 	PROVIDE( kernel_start = 0x100000 );
