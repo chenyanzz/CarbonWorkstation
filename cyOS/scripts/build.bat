@@ -1,1 +1,0 @@
-xmake -w -v

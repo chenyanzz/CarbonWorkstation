@@ -1,1 +1,0 @@
-qemu-system-i386 -hda G: -gdb tcp::1234 -S -m 4096M -d guest_errors,cpu_reset -localtime
