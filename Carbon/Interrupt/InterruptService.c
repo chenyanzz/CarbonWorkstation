@@ -2,30 +2,30 @@
 #include "../Include/CarbonKernelIO.h"
 #include "../Include/InterruptService.h"
 #include "../Include/InterruptController.h"
-#define exception1(x); atomic("movl %ebp,%esp"); \
-	atomic("popl %ebp");  \
-	atomic(x);  \
-	atomic("call exception_handler");  \
-	atomic("addl $8,%esp");  \
-	atomic("hlt");
-#define exception2(x,y); atomic("movl %ebp,%esp"); \
-	atomic("popl %ebp");  \
-	atomic(x);  \
-	atomic(y);  \
-	atomic("call exception_handler");  \
-	atomic("addl $8,%esp");  \
-	atomic("hlt");
-#define hwint(x) atomic("movl %ebp,%esp"); \
-	atomic("popl %ebp");  \
-	atomic(x); \
-	atomic("call spurious_irq"); \
-	atomic("addl %esp,4"); \
-	atomic("hlt");
+#define exception1(x); asm("movl %ebp,%esp"); \
+	asm("popl %ebp");  \
+	asm(x);  \
+	asm("call exception_handler");  \
+	asm("addl $8,%esp");  \
+	asm("hlt");
+#define exception2(x,y); asm("movl %ebp,%esp"); \
+	asm("popl %ebp");  \
+	asm(x);  \
+	asm(y);  \
+	asm("call exception_handler");  \
+	asm("addl $8,%esp");  \
+	asm("hlt");
+#define hwint(x) asm("movl %ebp,%esp"); \
+	asm("popl %ebp");  \
+	asm(x); \
+	asm("call spurious_irq"); \
+	asm("addl %esp,4"); \
+	asm("hlt");
 void spurious_irq(int irq) { printk("spurious_irq: %X\n", irq); }
 void interrupt_handler() {
     keyboard_handler(1);
     outb(0x20, 0x61);
-    atomic("movl %ebp,%esp;leave ;iret");
+    asm("movl %ebp,%esp;leave ;iret");
 }
 void keyboard_handler(int irq) {
     uint8_t scan_code = inb(0x60);
@@ -74,12 +74,12 @@ void exception_handler(int vec_no, int err_code, int eip, int cs, int eflags) {
     if (err_code != 0xFFFFFFFF) { printk("Error code: 0x%X\n", err_code); }
 }
 void hwint00() {
-    atomic("movl %ebp,%esp");
-    atomic("popl %ebp");
-    atomic("movb $0x20,%al");
-    atomic("outb %al,$0xa0");
-    atomic("outb %al,$0x20");
-    atomic("iret");
+    asm("movl %ebp,%esp");
+    asm("popl %ebp");
+    asm("movb $0x20,%al");
+    asm("outb %al,$0xa0");
+    asm("outb %al,$0x20");
+    asm("iret");
 }
 void hwint01() { hwint("pushl $1"); }
 void hwint02() { hwint("pushl $2"); }

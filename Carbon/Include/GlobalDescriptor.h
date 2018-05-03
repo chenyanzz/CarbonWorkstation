@@ -1,6 +1,5 @@
 #ifndef GLOBALDESCRIPTOR_H
 #define GLOBALDESCRIPTOR_H
-#include "Bootloader.h"
 #include "CarbonDefine.h"
 #include "Descriptor.h"
 #define GDT_COUNT 8192

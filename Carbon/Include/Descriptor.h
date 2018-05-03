@@ -1,6 +1,5 @@
 #ifndef DESCRIPTOR_H
 #define DESCRIPTOR_H
-#include "Bootloader.h"
 #include "CarbonDefine.h"
 #define DA_32 0x4000
 #define	DA_16 0x0000

@@ -51,11 +51,11 @@ void InitIDT() {
     InitPIC();
     uint32_t tmpidtaddress = (uint32_t)(&idt);
     uint64_t idt_operand = ((uint64_t)tmpidtaddress << 16) | ((sizeof(IDT) - 1));
-    atomic("lidt %0"::"m"(idt_operand));
+    asm("lidt %0"::"m"(idt_operand));
 }
 void ShowIDTTable(int begin, int end) {
     uint64_t idt_operand = (uint64_t)0;
-    atomic("sidt %0":"=m"(idt_operand));
+    asm("sidt %0":"=m"(idt_operand));
     printk("\nIDT_address:0x%08X  IDT_size:0x%08X\n", (uint32_t)(idt_operand >> 16), (uint32_t)(idt_operand & 0xFFFF));
     printk("index\t address selector-offset\t P DPL S TYPE param\n");
     uint32_t tmppp = (uint32_t)(idt_operand >> 16);

@@ -2,7 +2,6 @@
 #define KERNELASSEMBLY_H
 #include "CarbonDefine.h"
 #include "Descriptor.h"
-#define atomic(x) ({ asm volatile (x); })
 uint8_t inb(uint32_t port);
 uint16_t inw(uint32_t port);
 uint32_t intdw(uint32_t port);
