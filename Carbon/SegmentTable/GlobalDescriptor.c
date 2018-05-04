@@ -11,7 +11,7 @@ void ModifyDescriptor(Descriptor *desc, uint32_t limit, uint32_t base, uint32_t 
 }
 uint32_t GetGDTBase(int index) {
     uint64_t gdt_operand = 0;
-    atomic("sgdt %0":"=m"(gdt_operand));
+    asm("sgdt %0":"=m"(gdt_operand));
     uint32_t tmppp = (uint32_t)(gdt_operand >> 16);
     Descriptor *tmp = (Descriptor *)tmppp;
     tmp = tmp + index;
@@ -19,7 +19,7 @@ uint32_t GetGDTBase(int index) {
 }
 uint32_t GetGDTLimit(int index) {
     uint64_t gdt_operand = 0;
-    atomic("sgdt %0":"=m"(gdt_operand));
+    asm("sgdt %0":"=m"(gdt_operand));
     uint32_t tmppp = (uint32_t)(gdt_operand >> 16);
     Descriptor *tmp = (Descriptor *)tmppp;
     tmp = tmp + index;
@@ -27,7 +27,7 @@ uint32_t GetGDTLimit(int index) {
 }
 uint32_t GetGDTAttribute(int index) {
     uint64_t gdt_operand = 0;
-    atomic("sgdt %0":"=m"(gdt_operand));
+    asm("sgdt %0":"=m"(gdt_operand));
     uint32_t tmppp = (uint32_t)(gdt_operand >> 16);
     Descriptor *tmp = (Descriptor *)tmppp;
     tmp = tmp + index;
@@ -50,5 +50,5 @@ void InitGDT(uint32_t address) {
     SetGDT(d_tmp, GetGDTLimit(d_tmp), GetGDTBase(d_tmp), GetGDTAttribute(d_tmp));
     uint32_t tmp = (uint32_t)gdt;
     uint64_t gdt_operand = ((sizeof(GDT) - 1) | ((uint64_t)tmp << 16));
-    atomic("lgdt %0"::"m"(gdt_operand));
+    asm("lgdt %0"::"m"(gdt_operand));
 }
