@@ -3,6 +3,7 @@
 #include "../Include/CarbonStdArg.h"
 #include "../Include/String.h"
 #include "../Include/KernelAssembly.h"
+
 #define is_digit(c) ((c) >= '0' && (c) <= '9')
 #define ZEROPAD	1
 #define SIGN 2
@@ -15,7 +16,15 @@
 static uint16_t *video_memory = (uint16_t *)(0xB8000);
 static uint8_t cursor_x = 0;
 static uint8_t cursor_y = 0;
+
+
+static uint8_t attribute_byte = defaultColor;
+static uint16_t blank = 0x20 | (defaultColor << 8);
+
 static int vsprintf(char *buff, const char *format, va_list args);
+
+void printStr(char *str);
+
 void printk(const char *format, ...) {
     static char buffer[1024];
     va_list args;
@@ -23,13 +32,15 @@ void printk(const char *format, ...) {
     int i = vsprintf(buffer, format, args);
     va_end(args);
     buffer[i] = '\0';
-    write(buffer);
+    printStr(buffer);
 }
+
 static int skip_atoi(const char **s) {
     int i = 0;
     while (is_digit(**s)) { i = i * 10 + *((*s)++) - '0'; }
     return i;
 }
+
 static char *number(char *str, int num, int base, int size, int precision, int type) {
     char c, sign, tmp[36];
     const char *digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -68,6 +79,7 @@ static char *number(char *str, int num, int base, int size, int precision, int t
     while (size-- > 0) { *str++ = ' '; }
     return str;
 }
+
 static int vsprintf(char *buff, const char *format, va_list args) {
     int len;
     int i;
@@ -124,7 +136,7 @@ static int vsprintf(char *buff, const char *format, va_list args) {
                 if (!(flags & LEFT)) {
                     while (--field_width > 0) { *str++ = ' '; }
                 }
-                *str++ = (unsigned char)va_args(args, int);
+                *str++ = (unsigned char) va_args(args, int);
                 while (--field_width > 0) { *str++ = ' '; }
                 break;
             case 's':
@@ -132,7 +144,7 @@ static int vsprintf(char *buff, const char *format, va_list args) {
                 len = strlen(s);
                 if (precision < 0) { precision = len; }
                 else if (len > precision) { len = precision; }
-                if (!(flags & LEFT)) { while (len < field_width--) { *str++ = ' '; } }
+                if (!(flags & LEFT)) { while (len < field_width--) { *str++ = ' '; }}
                 for (i = 0; i < len; ++i) { *str++ = *s++; }
                 while (len < field_width--) { *str++ = ' '; }
                 break;
@@ -144,14 +156,15 @@ static int vsprintf(char *buff, const char *format, va_list args) {
                     field_width = 8;
                     flags |= ZEROPAD;
                 }
-                str = number(str, (unsigned long)va_args(args, void *), 16, field_width, precision, flags);
+                str = number(str, (unsigned long) va_args(args, void *), 16, field_width, precision, flags);
                 break;
             case 'x':
                 flags |= SMALL;
             case 'X':
                 str = number(str, va_args(args, unsigned long), 16, field_width, precision, flags);
                 break;
-            case 'd': case 'i':
+            case 'd':
+            case 'i':
                 flags |= SIGN;
             case 'u':
                 str = number(str, va_args(args, unsigned long), 10, field_width, precision, flags);
@@ -173,17 +186,12 @@ static int vsprintf(char *buff, const char *format, va_list args) {
     *str = '\0';
     return (str - buff);
 }
-static void move_cursor() {
-    uint16_t cursorLocation = cursor_y * 80 + cursor_x;
-    outb(0x3D4, 14);
-    outb(0x3D5, cursorLocation >> 8);
-    outb(0x3D4, 15);
-    outb(0x3D5, cursorLocation);
-}
+
+/**
+ * To move up whole screen if y>HEIGHT
+ */
 static void scroll() {
-    uint8_t attribute_byte = (0 << 4) | (0x5 & 0x0F);
-    uint16_t blank = 0x20 | (attribute_byte << 8);
-    if (cursor_y >= 25) {
+    if (cursor_y > SCREEN_HEIGHT) {
         int i;
         for (i = 0 * 80; i < 24 * 80; i++)
             video_memory[i] = video_memory[i + 80];
@@ -192,9 +200,26 @@ static void scroll() {
         cursor_y = 24;
     }
 }
-void clear() {
-    uint8_t attribute_byte = (0 << 4) | (0x5 & 0x0F);
-    uint16_t blank = 0x20 | (attribute_byte << 8);
+
+static void move_cursor() {
+
+    if (cursor_x >= 80) {
+        cursor_x = 0;
+        cursor_y++;
+    }
+    scroll();
+
+    //send to display
+    uint16_t cursorLocation = cursor_y * 80 + cursor_x;
+    outb(0x3D4, 14);
+    outb(0x3D5, cursorLocation >> 8);
+    outb(0x3D4, 15);
+    outb(0x3D5, cursorLocation);
+}
+
+
+void cls() {
+
     int i;
     for (i = 0; i < 80 * 25; i++)
         video_memory[i] = blank;
@@ -202,30 +227,48 @@ void clear() {
     cursor_y = 0;
     move_cursor();
 }
+
 void putchar(char c) {
-    uint8_t back_color = (uint8_t)0;
-    uint8_t front_color = (uint8_t)15;
-    uint8_t attribute_byte = (back_color << 4) | (front_color & 0x0F);
+    //todo: 这个地方线程不安全
+
     uint16_t attribute = attribute_byte << 8;
-    if (c == 0x08 && cursor_x) { cursor_x--; }
-    else if (c == 0x09) { cursor_x = (cursor_x + 8) & ~(8 - 1); }
+    if (c == '\b' && cursor_x) {
+        cursor_x--;
+        if (cursor_x < 0) {
+            cursor_x = SCREEN_WIDTH - 1;
+            cursor_y--;
+            if (cursor_y < 0) cursor_y = 0;
+        }
+    } else if (c == 0x09) { cursor_x = (cursor_x + 8) & ~(8 - 1); }
     else if (c == '\r') { cursor_x = 0; }
     else if (c == '\n') {
         cursor_x = 0;
         cursor_y++;
-    }
-    else if (c >= ' ') {
+    } else if (c == '\t') {
+        cursor_x = (cursor_x / tab_size + 1) * tab_size;
+    } else if (c >= ' ') {
         video_memory[cursor_y * 80 + cursor_x] = c | attribute;
         cursor_x++;
     }
-    if (cursor_x >= 80) {
-        cursor_x = 0;
-        cursor_y++;
-    }
-    scroll();
+
     move_cursor();
 }
-void write(char *str) {
+
+void printStr(char *str) {
     while (*str)
         putchar(*str++);
+}
+
+void setCursor(int x, int y) {
+    cursor_x = x % SCREEN_WIDTH;
+    cursor_y = y % SCREEN_HEIGHT;
+    move_cursor();
+}
+
+void setTerminalColor(TextColor tc, BgColor bc, bool blink) {
+    attribute_byte = makeColor(tc, bc) | (blink << 7);
+}
+
+void setTerminalColorByte(char c) {
+    attribute_byte = c;
 }

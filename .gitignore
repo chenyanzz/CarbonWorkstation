@@ -1,5 +1,7 @@
 */cmake-build-debug/
 */.vscode/
-Carbon/src/.idea/
-Carbon/src/.vscode/
-Carbon/src/cmake-build-debug/
+*/.idea/
+
+*/build/
+
+*/*.img

@@ -5,11 +5,13 @@ MOUNT=/mnt/Carbon
 GRUB=grub.img
 TARGET=$ROOT/Carbon.img
 test -d Build || mkdir Build
-test -d $MOUNT || mkdir -p $MOUNT
+test -d $MOUNT || sudo mkdir -p $MOUNT
 echo "Compiling source"
 cd Build
 cmake ../
 make
+strip $BUILD/kernel.elf
+
 echo "Generate image"
 cd $ROOT
 cp $GRUB $TARGET
